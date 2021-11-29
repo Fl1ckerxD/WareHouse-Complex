@@ -1,0 +1,14 @@
+D:\C#Projects\Warehouse Complex\Warehouse Complex\Warehouse Complex\bin\Debug\Warehouse Complex.mdf
+D:\C#Projects\Warehouse Complex\Warehouse Complex\Warehouse Complex\bin\Debug\Warehouse Complex_log.ldf
+D:\C#Projects\Warehouse Complex\Warehouse Complex\Warehouse Complex\bin\Debug\Warehouse Complex.exe.config
+D:\C#Projects\Warehouse Complex\Warehouse Complex\Warehouse Complex\bin\Debug\Warehouse Complex.exe
+D:\C#Projects\Warehouse Complex\Warehouse Complex\Warehouse Complex\bin\Debug\Warehouse Complex.pdb
+D:\C#Projects\Warehouse Complex\Warehouse Complex\Warehouse Complex\obj\Debug\Warehouse Complex.csprojAssemblyReference.cache
+D:\C#Projects\Warehouse Complex\Warehouse Complex\Warehouse Complex\obj\Debug\Warehouse_Complex.Form1.resources
+D:\C#Projects\Warehouse Complex\Warehouse Complex\Warehouse Complex\obj\Debug\Warehouse_Complex.Properties.Resources.resources
+D:\C#Projects\Warehouse Complex\Warehouse Complex\Warehouse Complex\obj\Debug\Warehouse Complex.csproj.GenerateResource.cache
+D:\C#Projects\Warehouse Complex\Warehouse Complex\Warehouse Complex\obj\Debug\Warehouse Complex.csproj.CoreCompileInputs.cache
+D:\C#Projects\Warehouse Complex\Warehouse Complex\Warehouse Complex\obj\Debug\Warehouse Complex.exe
+D:\C#Projects\Warehouse Complex\Warehouse Complex\Warehouse Complex\obj\Debug\Warehouse Complex.pdb
+D:\C#Projects\Warehouse Complex\Warehouse Complex\Warehouse Complex\obj\Debug\Warehouse_Complex.AboutProgram.resources
+D:\C#Projects\Warehouse Complex\Warehouse Complex\Warehouse Complex\obj\Debug\Warehouse_Complex.Directory.resources

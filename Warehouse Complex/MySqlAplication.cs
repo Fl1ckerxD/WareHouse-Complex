@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+
+namespace Warehouse_Complex
+{
+    class MySqlAplication
+    {
+        public SqlConnection sqlConnection = null;
+        public void Connect()
+        {
+            sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString);
+            sqlConnection.Open();
+        }
+        public void ShowTable(string select,DataGridView dataGridView)
+        {
+            Connect();
+
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(select, sqlConnection);
+
+            DataSet dataSet = new DataSet();
+            dataAdapter.Fill(dataSet);
+
+            dataGridView.DataSource = dataSet.Tables[0];
+        }
+    }
+}

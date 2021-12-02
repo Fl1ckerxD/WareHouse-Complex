@@ -26,6 +26,7 @@ namespace Warehouse_Complex
         {
             if (this.p_showing.Controls.Count > 0)
                 this.p_showing.Controls.RemoveAt(0);
+
             Form f = Form as Form;
             f.TopLevel = false;
             f.Dock = DockStyle.Fill;

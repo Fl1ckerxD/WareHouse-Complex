@@ -29,136 +29,111 @@ namespace Warehouse_Complex
         /// </summary>
         private void InitializeComponent()
         {
-            this.складыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.товарыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.получателиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.поставшикиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.работникикиСкладаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.tb_searcher = new System.Windows.Forms.TextBox();
-            this.cb_columns = new System.Windows.Forms.ComboBox();
-            this.menuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tp_warehouses = new System.Windows.Forms.TabPage();
+            this.tp_goods = new System.Windows.Forms.TabPage();
+            this.tp_recipients = new System.Windows.Forms.TabPage();
+            this.tp_suppliers = new System.Windows.Forms.TabPage();
+            this.tp_warehouseWorkers = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tabControl1.SuspendLayout();
+            this.tp_warehouses.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // складыToolStripMenuItem
+            // tabControl1
             // 
-            this.складыToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.складыToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.складыToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.складыToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.White;
-            this.складыToolStripMenuItem.Name = "складыToolStripMenuItem";
-            this.складыToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.складыToolStripMenuItem.Text = "Склады";
+            this.tabControl1.Controls.Add(this.tp_warehouses);
+            this.tabControl1.Controls.Add(this.tp_goods);
+            this.tabControl1.Controls.Add(this.tp_recipients);
+            this.tabControl1.Controls.Add(this.tp_suppliers);
+            this.tabControl1.Controls.Add(this.tp_warehouseWorkers);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(800, 450);
+            this.tabControl1.TabIndex = 0;
             // 
-            // товарыToolStripMenuItem
+            // tp_warehouses
             // 
-            this.товарыToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.товарыToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.товарыToolStripMenuItem.Name = "товарыToolStripMenuItem";
-            this.товарыToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.товарыToolStripMenuItem.Text = "Товары";
-            this.товарыToolStripMenuItem.Click += new System.EventHandler(this.товарыToolStripMenuItem_Click);
+            this.tp_warehouses.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.tp_warehouses.Controls.Add(this.textBox1);
+            this.tp_warehouses.Controls.Add(this.comboBox1);
+            this.tp_warehouses.Controls.Add(this.dataGridView1);
+            this.tp_warehouses.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tp_warehouses.Location = new System.Drawing.Point(4, 22);
+            this.tp_warehouses.Name = "tp_warehouses";
+            this.tp_warehouses.Padding = new System.Windows.Forms.Padding(3);
+            this.tp_warehouses.Size = new System.Drawing.Size(792, 424);
+            this.tp_warehouses.TabIndex = 1;
+            this.tp_warehouses.Text = "Склады";
             // 
-            // получателиToolStripMenuItem
+            // tp_goods
             // 
-            this.получателиToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.получателиToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.получателиToolStripMenuItem.Name = "получателиToolStripMenuItem";
-            this.получателиToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
-            this.получателиToolStripMenuItem.Text = "Получатели";
-            this.получателиToolStripMenuItem.Click += new System.EventHandler(this.получателиToolStripMenuItem_Click);
+            this.tp_goods.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.tp_goods.Location = new System.Drawing.Point(4, 22);
+            this.tp_goods.Name = "tp_goods";
+            this.tp_goods.Padding = new System.Windows.Forms.Padding(3);
+            this.tp_goods.Size = new System.Drawing.Size(792, 424);
+            this.tp_goods.TabIndex = 2;
+            this.tp_goods.Text = "Товары";
             // 
-            // поставшикиToolStripMenuItem
+            // tp_recipients
             // 
-            this.поставшикиToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.поставшикиToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.поставшикиToolStripMenuItem.Name = "поставшикиToolStripMenuItem";
-            this.поставшикиToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
-            this.поставшикиToolStripMenuItem.Text = "Поставщики";
-            this.поставшикиToolStripMenuItem.Click += new System.EventHandler(this.поставшикиToolStripMenuItem_Click);
+            this.tp_recipients.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.tp_recipients.Location = new System.Drawing.Point(4, 22);
+            this.tp_recipients.Name = "tp_recipients";
+            this.tp_recipients.Padding = new System.Windows.Forms.Padding(3);
+            this.tp_recipients.Size = new System.Drawing.Size(792, 424);
+            this.tp_recipients.TabIndex = 3;
+            this.tp_recipients.Text = "Получатели";
             // 
-            // работникикиСкладаToolStripMenuItem
+            // tp_suppliers
             // 
-            this.работникикиСкладаToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.работникикиСкладаToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.работникикиСкладаToolStripMenuItem.Name = "работникикиСкладаToolStripMenuItem";
-            this.работникикиСкладаToolStripMenuItem.Size = new System.Drawing.Size(118, 20);
-            this.работникикиСкладаToolStripMenuItem.Text = "Работники склада";
-            this.работникикиСкладаToolStripMenuItem.Click += new System.EventHandler(this.работникикиСкладаToolStripMenuItem_Click);
+            this.tp_suppliers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.tp_suppliers.Location = new System.Drawing.Point(4, 22);
+            this.tp_suppliers.Name = "tp_suppliers";
+            this.tp_suppliers.Padding = new System.Windows.Forms.Padding(3);
+            this.tp_suppliers.Size = new System.Drawing.Size(792, 424);
+            this.tp_suppliers.TabIndex = 4;
+            this.tp_suppliers.Text = "Поставщики";
             // 
-            // menuStrip
+            // tp_warehouseWorkers
             // 
-            this.menuStrip.BackColor = System.Drawing.Color.White;
-            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.складыToolStripMenuItem,
-            this.товарыToolStripMenuItem,
-            this.получателиToolStripMenuItem,
-            this.поставшикиToolStripMenuItem,
-            this.работникикиСкладаToolStripMenuItem});
-            this.menuStrip.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip.TabIndex = 0;
-            this.menuStrip.Text = "menuStrip1";
+            this.tp_warehouseWorkers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.tp_warehouseWorkers.Location = new System.Drawing.Point(4, 22);
+            this.tp_warehouseWorkers.Name = "tp_warehouseWorkers";
+            this.tp_warehouseWorkers.Padding = new System.Windows.Forms.Padding(3);
+            this.tp_warehouseWorkers.Size = new System.Drawing.Size(792, 424);
+            this.tp_warehouseWorkers.TabIndex = 5;
+            this.tp_warehouseWorkers.Text = "Работники склада";
             // 
-            // dataGridView
+            // dataGridView1
             // 
-            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView.Location = new System.Drawing.Point(3, 108);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(794, 315);
-            this.dataGridView.TabIndex = 0;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 111);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(786, 310);
+            this.dataGridView1.TabIndex = 0;
             // 
-            // tableLayoutPanel1
+            // comboBox1
             // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 24);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 105F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 267F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 426);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(332, 58);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 1;
             // 
-            // panel1
+            // textBox1
             // 
-            this.panel1.Controls.Add(this.cb_columns);
-            this.panel1.Controls.Add(this.tb_searcher);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(794, 99);
-            this.panel1.TabIndex = 1;
-            // 
-            // tb_searcher
-            // 
-            this.tb_searcher.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_searcher.Location = new System.Drawing.Point(215, 76);
-            this.tb_searcher.Name = "tb_searcher";
-            this.tb_searcher.Size = new System.Drawing.Size(382, 20);
-            this.tb_searcher.TabIndex = 0;
-            this.tb_searcher.TextChanged += new System.EventHandler(this.tb_searcher_TextChanged);
-            // 
-            // cb_columns
-            // 
-            this.cb_columns.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cb_columns.FormattingEnabled = true;
-            this.cb_columns.Location = new System.Drawing.Point(340, 49);
-            this.cb_columns.Name = "cb_columns";
-            this.cb_columns.Size = new System.Drawing.Size(121, 21);
-            this.cb_columns.TabIndex = 1;
+            this.textBox1.Location = new System.Drawing.Point(252, 85);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(281, 20);
+            this.textBox1.TabIndex = 2;
             // 
             // Directory
             // 
@@ -166,35 +141,28 @@ namespace Warehouse_Complex
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.menuStrip);
+            this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MainMenuStrip = this.menuStrip;
             this.Name = "Directory";
             this.Text = "Directory";
-            this.menuStrip.ResumeLayout(false);
-            this.menuStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tp_warehouses.ResumeLayout(false);
+            this.tp_warehouses.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ToolStripMenuItem складыToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem товарыToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem получателиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem поставшикиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem работникикиСкладаToolStripMenuItem;
-        private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox cb_columns;
-        private System.Windows.Forms.TextBox tb_searcher;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tp_warehouses;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TabPage tp_goods;
+        private System.Windows.Forms.TabPage tp_recipients;
+        private System.Windows.Forms.TabPage tp_suppliers;
+        private System.Windows.Forms.TabPage tp_warehouseWorkers;
     }
 }

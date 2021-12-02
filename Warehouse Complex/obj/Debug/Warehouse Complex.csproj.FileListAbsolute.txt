@@ -12,3 +12,17 @@ D:\C#Projects\Warehouse Complex\Warehouse Complex\Warehouse Complex\obj\Debug\Wa
 D:\C#Projects\Warehouse Complex\Warehouse Complex\Warehouse Complex\obj\Debug\Warehouse Complex.pdb
 D:\C#Projects\Warehouse Complex\Warehouse Complex\Warehouse Complex\obj\Debug\Warehouse_Complex.AboutProgram.resources
 D:\C#Projects\Warehouse Complex\Warehouse Complex\Warehouse Complex\obj\Debug\Warehouse_Complex.Directory.resources
+C:\Users\mihay\Source\Repos\Fl1ckerxD\WareHouse-Complex\Warehouse Complex\bin\Debug\Warehouse Complex.mdf
+C:\Users\mihay\Source\Repos\Fl1ckerxD\WareHouse-Complex\Warehouse Complex\bin\Debug\Warehouse Complex_log.ldf
+C:\Users\mihay\Source\Repos\Fl1ckerxD\WareHouse-Complex\Warehouse Complex\bin\Debug\Warehouse Complex.exe.config
+C:\Users\mihay\Source\Repos\Fl1ckerxD\WareHouse-Complex\Warehouse Complex\bin\Debug\Warehouse Complex.exe
+C:\Users\mihay\Source\Repos\Fl1ckerxD\WareHouse-Complex\Warehouse Complex\bin\Debug\Warehouse Complex.pdb
+C:\Users\mihay\Source\Repos\Fl1ckerxD\WareHouse-Complex\Warehouse Complex\obj\Debug\Warehouse Complex.csprojAssemblyReference.cache
+C:\Users\mihay\Source\Repos\Fl1ckerxD\WareHouse-Complex\Warehouse Complex\obj\Debug\Warehouse_Complex.AboutProgram.resources
+C:\Users\mihay\Source\Repos\Fl1ckerxD\WareHouse-Complex\Warehouse Complex\obj\Debug\Warehouse_Complex.Directory.resources
+C:\Users\mihay\Source\Repos\Fl1ckerxD\WareHouse-Complex\Warehouse Complex\obj\Debug\Warehouse_Complex.Form1.resources
+C:\Users\mihay\Source\Repos\Fl1ckerxD\WareHouse-Complex\Warehouse Complex\obj\Debug\Warehouse_Complex.Properties.Resources.resources
+C:\Users\mihay\Source\Repos\Fl1ckerxD\WareHouse-Complex\Warehouse Complex\obj\Debug\Warehouse Complex.csproj.GenerateResource.cache
+C:\Users\mihay\Source\Repos\Fl1ckerxD\WareHouse-Complex\Warehouse Complex\obj\Debug\Warehouse Complex.csproj.CoreCompileInputs.cache
+C:\Users\mihay\Source\Repos\Fl1ckerxD\WareHouse-Complex\Warehouse Complex\obj\Debug\Warehouse Complex.exe
+C:\Users\mihay\Source\Repos\Fl1ckerxD\WareHouse-Complex\Warehouse Complex\obj\Debug\Warehouse Complex.pdb

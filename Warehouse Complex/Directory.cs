@@ -13,7 +13,7 @@ namespace Warehouse_Complex
 {
     public partial class Directory : Form
     {
-        MySqlConnect mySqlConnect = new MySqlConnect();
+        MySqlAplication mySqlAplication = new MySqlAplication();
         public Directory()
         {
             InitializeComponent();
@@ -21,35 +21,28 @@ namespace Warehouse_Complex
 
         private void товарыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ShowTables("Select * from [Товары]");
+            mySqlAplication.ShowTable("SELECT dbo.Товары.Id, dbo.Товары.Название, dbo.Товары.Размер, dbo.Товары.Состояние, dbo.Склады.Название [Название склада], dbo.[Расположения товаров].[Номер полки] "+
+                "FROM dbo.[Расположения товаров] FULL OUTER JOIN " +
+                "dbo.Товары ON dbo.[Расположения товаров].Товар_Id = dbo.Товары.Id "+
+                "FULL OUTER JOIN dbo.Склады on dbo.[Расположения товаров].Склад_Id = dbo.Склады.Id", dataGridView);
         }    
         
         private void получателиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ShowTables("Select * from [Получатели]");
+            mySqlAplication.ShowTable("Select * from [Получатели]", dataGridView);
         }
 
         private void поставшикиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ShowTables("Select * from [Поставщики]");
+            mySqlAplication.ShowTable("Select * from [Поставщики]", dataGridView);
         }
 
         private void работникикиСкладаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ShowTables("Select * from [Работники склада]");
+            mySqlAplication.ShowTable("Select * from [Работники склада]", dataGridView);
         }
 
-        public void ShowTables(string select)
-        {
-            mySqlConnect.Connect();
-
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(select, mySqlConnect.sqlConnection);
-
-            DataSet dataSet = new DataSet();
-            dataAdapter.Fill(dataSet);
-
-            dataGridView.DataSource = dataSet.Tables[0];
-        }
+        
 
         private void tb_searcher_TextChanged(object sender, EventArgs e)
         {

@@ -29,9 +29,10 @@ namespace Warehouse_Complex
 
             dataGridView.DataSource = dataSet.Tables[0];
         }
-        public void SearchItem(DataGridView dataGridView,ComboBox comboBox,TextBox tb_searcher)
+        public void SearchItem(DataGridView dataGridView, ComboBox comboBox, TextBox tb_searcher)
         {
             (dataGridView.DataSource as DataTable).DefaultView.RowFilter = $"[{comboBox.Text}] LIKE '%{tb_searcher.Text}%'";
         }
+
     }
 }

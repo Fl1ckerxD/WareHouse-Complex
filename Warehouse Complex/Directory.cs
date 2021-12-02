@@ -18,31 +18,14 @@ namespace Warehouse_Complex
         {
             InitializeComponent();
         }
-
-        //private void товарыToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    mySqlAplication.ShowTable("SELECT dbo.Товары.Id, dbo.Товары.Название, dbo.Товары.Размер, dbo.Товары.Состояние, dbo.Склады.Название [Название склада], dbo.[Расположения товаров].[Номер полки] " +
-        //        "FROM dbo.[Расположения товаров] FULL OUTER JOIN " +
-        //        "dbo.Товары ON dbo.[Расположения товаров].Товар_Id = dbo.Товары.Id " +
-        //        "FULL OUTER JOIN dbo.Склады on dbo.[Расположения товаров].Склад_Id = dbo.Склады.Id", dataGridView);
-        //}
-
-        //private void получателиToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    mySqlAplication.ShowTable("Select * from [Получатели]", dataGridView);
-        //}
-
-        //private void поставшикиToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    mySqlAplication.ShowTable("Select * from [Поставщики]", dataGridView);
-        //}
-
-        //private void работникикиСкладаToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    mySqlAplication.ShowTable("Select * from [Работники склада]", dataGridView);
-        //}
         private void Directory_Load(object sender, EventArgs e)
         {
+            cb_columnsWarehouse.SelectedIndex = 0;
+            cb_columnsGood.SelectedIndex = 0;
+            cb_columnsRecipients.SelectedIndex = 0;
+            cb_columnsSuppliers.SelectedIndex = 0;
+            cb_columnsWarehouseWorkers.SelectedIndex = 0;
+
             mySqlAplication.ShowTable("SELECT dbo.Товары.Id, dbo.Товары.Название, dbo.Товары.Размер, dbo.Товары.Состояние, dbo.Склады.Название [Название склада], dbo.[Расположения товаров].[Номер полки] " +
                "FROM dbo.[Расположения товаров] FULL OUTER JOIN " +
                "dbo.Товары ON dbo.[Расположения товаров].Товар_Id = dbo.Товары.Id " +

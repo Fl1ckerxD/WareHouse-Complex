@@ -62,9 +62,5 @@ namespace Warehouse_Complex
         {
             mySqlAplication.SearchItem(dataGridView_WarehouseWorkers, cb_columnsWarehouseWorkers, tb_searcherWarehouseWorkers);
         }
-        public void sf()
-        {
-            string sf = "fasf";
-        }
     }
 }

@@ -26,6 +26,11 @@ namespace Warehouse_Complex
             cb_columnsSuppliers.SelectedIndex = 0;
             cb_columnsWarehouseWorkers.SelectedIndex = 0;
 
+            mySqlAplication.ShowTable("Select dbo.Склады.Id, dbo.Склады.Название, dbo.Склады.Тип, " +
+                "dbo.[Работники склада].Фамилия + ' ' + dbo.[Работники склада].Имя + ' ' + dbo.[Работники склада].Отчество [Заведующий] " +
+                "FROM dbo.[Склады] FULL OUTER JOIN " +
+                "dbo.[Работники склада] ON dbo.Склады.Заведующий = dbo.[Работники склада].Id", dataGridView_Warehouse);
+
             mySqlAplication.ShowTable("SELECT dbo.Товары.Id, dbo.Товары.Название, dbo.Товары.Размер, dbo.Товары.Состояние, dbo.Склады.Название [Название склада], dbo.[Расположения товаров].[Номер полки] " +
                "FROM dbo.[Расположения товаров] FULL OUTER JOIN " +
                "dbo.Товары ON dbo.[Расположения товаров].Товар_Id = dbo.Товары.Id " +

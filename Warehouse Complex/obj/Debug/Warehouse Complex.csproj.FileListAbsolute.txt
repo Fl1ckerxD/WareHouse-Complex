@@ -26,3 +26,4 @@ C:\Users\mihay\Source\Repos\Fl1ckerxD\WareHouse-Complex\Warehouse Complex\obj\De
 C:\Users\mihay\Source\Repos\Fl1ckerxD\WareHouse-Complex\Warehouse Complex\obj\Debug\Warehouse Complex.csproj.CoreCompileInputs.cache
 C:\Users\mihay\Source\Repos\Fl1ckerxD\WareHouse-Complex\Warehouse Complex\obj\Debug\Warehouse Complex.exe
 C:\Users\mihay\Source\Repos\Fl1ckerxD\WareHouse-Complex\Warehouse Complex\obj\Debug\Warehouse Complex.pdb
+C:\Users\mihay\Source\Repos\Fl1ckerxD\WareHouse-Complex\Warehouse Complex\obj\Debug\Warehouse_Complex.InputItem.resources

@@ -39,5 +39,10 @@ namespace Warehouse_Complex
         {
             loadform(new Directory());
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            loadform(new InputItem());
+        }
     }
 }

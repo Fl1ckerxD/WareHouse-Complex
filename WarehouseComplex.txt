@@ -1,0 +1,110 @@
+10 columns
+
+CREATE TABLE [dbo].[Товары] (
+    [Id]        INT            IDENTITY (1, 1) NOT NULL,
+    [Название]  NVARCHAR (MAX) NOT NULL,
+    [Размер]    NVARCHAR (5)   NOT NULL,
+    [Вес]       NVARCHAR (50)  NULL,
+    [Состояние] NVARCHAR (15)  NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+CREATE TABLE [dbo].[Получатели] (
+    [Id]                      INT            IDENTITY (1, 1) NOT NULL,
+    [Наименование получателя] NVARCHAR (MAX) NOT NULL,
+    [Юридический адрес]       NVARCHAR (MAX) NOT NULL,
+    [Телефон]                 NVARCHAR (12)  NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+CREATE TABLE [dbo].[Поставщики] (
+    [Id]                       INT            IDENTITY (1, 1) NOT NULL,
+    [Наименование  поставщика] NVARCHAR (MAX) NOT NULL,
+    [Юридический адрес]        NVARCHAR (MAX) NOT NULL,
+    [Телефон]                  NVARCHAR (12)  NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+CREATE TABLE [dbo].[Работники склада] (
+    [Id]        INT           IDENTITY (1, 1) NOT NULL,
+    [Фамилия]   NVARCHAR (50) NULL,
+    [Имя]       NVARCHAR (50) NULL,
+    [Отчество]  NVARCHAR (50) NULL,
+    [Должность] NVARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+CREATE TABLE [dbo].[Типы пользователей] (
+    [Id]       INT           IDENTITY (1, 1) NOT NULL,
+    [Название] NVARCHAR (20) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+CREATE TABLE [dbo].[Склады] (
+    [Id]         INT           IDENTITY (1, 1) NOT NULL,
+    [Название]   NVARCHAR (50) NOT NULL,
+    [Тип]        NCHAR (5)     NOT NULL,
+    [Заведующий] INT           NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_Склады_ToРаботники склада] FOREIGN KEY ([Заведующий]) REFERENCES [dbo].[Работники склада] ([Id])
+);
+
+
+CREATE TABLE [dbo].[Расположения товаров] (
+    [Id]          INT IDENTITY (1, 1) NOT NULL,
+    [Товар_Id]    INT NOT NULL,
+    [Склад_Id]    INT NOT NULL,
+    [Номер полки] INT NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_Расположения товаров_ToСклады] FOREIGN KEY ([Склад_Id]) REFERENCES [dbo].[Склады] ([Id]),
+    CONSTRAINT [FK_Расположения товаров_ToТовары] FOREIGN KEY ([Товар_Id]) REFERENCES [dbo].[Товары] ([Id])
+);
+
+
+CREATE TABLE [dbo].[Логины] (
+    [Логин]            NVARCHAR (50) NOT NULL,
+    [Пароль]           NVARCHAR (50) NOT NULL,
+    [Тип пользователя] INT           NULL,
+    [Пользователь_id]  INT           NULL,
+    PRIMARY KEY CLUSTERED ([Логин] ASC),
+    CONSTRAINT [FK_Логины_ToРаботники склада] FOREIGN KEY ([Пользователь_id]) REFERENCES [dbo].[Работники склада] ([Id]),
+    CONSTRAINT [FK_Логины_ToТипы пользователей] FOREIGN KEY ([Тип пользователя]) REFERENCES [dbo].[Типы пользователей] ([Id])
+);
+
+
+CREATE TABLE [dbo].[Поставки] (
+    [Id]                      INT            IDENTITY (1, 1) NOT NULL,
+    [Дата]                    DATE           NOT NULL,
+    [Товар_Id]                INT            NOT NULL,
+    [Наименование поставщика] INT            NOT NULL,
+    [ФИО принявшего товар]    INT            NOT NULL,
+    [ФИО сдавшего товар]      NVARCHAR (MAX) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_Поставки_ToТовары] FOREIGN KEY ([Товар_Id]) REFERENCES [dbo].[Товары] ([Id]),
+    CONSTRAINT [FK_Поставки_ToРаботники склада] FOREIGN KEY ([ФИО принявшего товар]) REFERENCES [dbo].[Работники склада] ([Id]),
+    CONSTRAINT [FK_Поставки_ToПоставщики] FOREIGN KEY ([Наименование поставщика]) REFERENCES [dbo].[Поставщики] ([Id])
+);
+
+
+CREATE TABLE [dbo].[Расходы] (
+    [Id]                      INT            IDENTITY (1, 1) NOT NULL,
+    [Дата]                    DATE           NOT NULL,
+    [Товар_Id]                INT            NOT NULL,
+    [Наименование получателя] INT            NOT NULL,
+    [ФИО принявшего товар]    NVARCHAR (MAX) NOT NULL,
+    [ФИО сдавшего товар]      INT            NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_Расоходы_ToТовары] FOREIGN KEY ([Товар_Id]) REFERENCES [dbo].[Товары] ([Id]),
+    CONSTRAINT [FK_Расходы_ToРаботники склада] FOREIGN KEY ([ФИО сдавшего товар]) REFERENCES [dbo].[Работники склада] ([Id]),
+    CONSTRAINT [FK_Расходы_ToПолучатели] FOREIGN KEY ([Наименование получателя]) REFERENCES [dbo].[Получатели] ([Id])
+);
+
+
+
+
+

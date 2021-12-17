@@ -31,7 +31,7 @@ namespace Warehouse_Complex
                 "FROM dbo.[Склады] FULL OUTER JOIN " +
                 "dbo.[Работники склада] ON dbo.Склады.Заведующий = dbo.[Работники склада].Id", dataGridView_Warehouse);
 
-            mySqlAplication.ShowTable("SELECT dbo.Товары.Id, dbo.Товары.Название, dbo.Товары.Размер, dbo.Товары.Состояние, dbo.Склады.Название [Название склада], dbo.[Расположения товаров].[Номер полки] " +
+            mySqlAplication.ShowTable("SELECT dbo.Товары.Id, dbo.Товары.Название, dbo.Товары.Размер, dbo.Товары.Вес, dbo.Товары.Состояние, dbo.Склады.Название [Название склада], dbo.[Расположения товаров].[Номер полки] " +
                "FROM dbo.[Расположения товаров] FULL OUTER JOIN " +
                "dbo.Товары ON dbo.[Расположения товаров].Товар_Id = dbo.Товары.Id " +
                "FULL OUTER JOIN dbo.Склады on dbo.[Расположения товаров].Склад_Id = dbo.Склады.Id", dataGridView_Good);

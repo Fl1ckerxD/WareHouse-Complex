@@ -27,3 +27,18 @@ C:\Users\mihay\Source\Repos\Fl1ckerxD\WareHouse-Complex\Warehouse Complex\obj\De
 C:\Users\mihay\Source\Repos\Fl1ckerxD\WareHouse-Complex\Warehouse Complex\obj\Debug\Warehouse Complex.exe
 C:\Users\mihay\Source\Repos\Fl1ckerxD\WareHouse-Complex\Warehouse Complex\obj\Debug\Warehouse Complex.pdb
 C:\Users\mihay\Source\Repos\Fl1ckerxD\WareHouse-Complex\Warehouse Complex\obj\Debug\Warehouse_Complex.InputItem.resources
+D:\C#Projects\Git\Warehouse\Warehouse Complex\bin\Debug\Warehouse Complex.mdf
+D:\C#Projects\Git\Warehouse\Warehouse Complex\bin\Debug\Warehouse Complex_log.ldf
+D:\C#Projects\Git\Warehouse\Warehouse Complex\bin\Debug\Warehouse Complex.exe.config
+D:\C#Projects\Git\Warehouse\Warehouse Complex\bin\Debug\Warehouse Complex.exe
+D:\C#Projects\Git\Warehouse\Warehouse Complex\bin\Debug\Warehouse Complex.pdb
+D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse Complex.csproj.AssemblyReference.cache
+D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse_Complex.AboutProgram.resources
+D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse_Complex.Directory.resources
+D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse_Complex.Form1.resources
+D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse_Complex.InputItem.resources
+D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse_Complex.Properties.Resources.resources
+D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse Complex.csproj.GenerateResource.cache
+D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse Complex.csproj.CoreCompileInputs.cache
+D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse Complex.exe
+D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse Complex.pdb

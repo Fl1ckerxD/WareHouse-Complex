@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Warehouse Complex"
   ],
-  "SelectedNode": "\\Warehouse Complex.sln",
+  "SelectedNode": "\\Warehouse Complex\\InputItem.cs",
   "PreviewInSolutionExplorer": false
 }

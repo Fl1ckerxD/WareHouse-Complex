@@ -31,8 +31,8 @@ namespace Warehouse_Complex
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.b_directory = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.b_sup = new System.Windows.Forms.Button();
+            this.b_rec = new System.Windows.Forms.Button();
             this.b_aboutProgram = new System.Windows.Forms.Button();
             this.p_showing = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
@@ -46,8 +46,8 @@ namespace Warehouse_Complex
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.b_directory, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.b_sup, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.b_rec, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.b_aboutProgram, 0, 3);
             this.tableLayoutPanel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -59,6 +59,7 @@ namespace Warehouse_Complex
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.10133F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.10133F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.69602F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 586);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -74,28 +75,29 @@ namespace Warehouse_Complex
             this.b_directory.UseVisualStyleBackColor = true;
             this.b_directory.Click += new System.EventHandler(this.b_directory_Click);
             // 
-            // button2
+            // b_sup
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.b_sup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(4, 192);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(192, 97);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Приход";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.b_sup.Location = new System.Drawing.Point(4, 192);
+            this.b_sup.Name = "b_sup";
+            this.b_sup.Size = new System.Drawing.Size(192, 97);
+            this.b_sup.TabIndex = 1;
+            this.b_sup.Text = "Приход";
+            this.b_sup.UseVisualStyleBackColor = true;
+            this.b_sup.Click += new System.EventHandler(this.b_sup_Click);
             // 
-            // button3
+            // b_rec
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.b_rec.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(4, 338);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(192, 97);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Расход";
-            this.button3.UseVisualStyleBackColor = true;
+            this.b_rec.Location = new System.Drawing.Point(4, 338);
+            this.b_rec.Name = "b_rec";
+            this.b_rec.Size = new System.Drawing.Size(192, 97);
+            this.b_rec.TabIndex = 2;
+            this.b_rec.Text = "Расход";
+            this.b_rec.UseVisualStyleBackColor = true;
+            this.b_rec.Click += new System.EventHandler(this.b_rec_Click);
             // 
             // b_aboutProgram
             // 
@@ -127,7 +129,7 @@ namespace Warehouse_Complex
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Че смотришь";
+            this.Text = "Главное окно";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -138,8 +140,8 @@ namespace Warehouse_Complex
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button b_directory;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button b_sup;
+        private System.Windows.Forms.Button b_rec;
         private System.Windows.Forms.Button b_aboutProgram;
         private System.Windows.Forms.Panel p_showing;
     }

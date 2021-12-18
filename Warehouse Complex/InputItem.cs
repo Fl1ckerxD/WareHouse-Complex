@@ -20,18 +20,15 @@ namespace Warehouse_Complex
         }
 
         private void InputItem_Load(object sender, EventArgs e)
-        {        
+        {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "warehouse_ComplexDataSet.Склады". При необходимости она может быть перемещена или удалена.
+            this.складыTableAdapter.Fill(this.warehouse_ComplexDataSet.Склады);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "warehouse_ComplexDataSet.Работники_склада". При необходимости она может быть перемещена или удалена.
             this.работники_складаTableAdapter.Fill(this.warehouse_ComplexDataSet.Работники_склада);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "warehouse_ComplexDataSet.Поставщики". При необходимости она может быть перемещена или удалена.
             this.поставщикиTableAdapter.Fill(this.warehouse_ComplexDataSet.Поставщики);
 
-            //mySqlAplication.ShowTable("SELECT dbo.Поставки.Id, dbo.Поставки.Дата, dbo.Поставки.Товар_Id, dbo.Товары.Название [Название товара], dbo.Поставщики.[Наименование  поставщика], " +
-            //    "dbo.[Работники склада].Фамилия + ' ' + dbo.[Работники склада].Имя + ' ' + dbo.[Работники склада].Отчество[ФИО принявшего товар], dbo.Поставки.[ФИО сдавшего товар] " +
-            //    "FROM dbo.[Поставки] FULL OUTER JOIN " +
-            //    "dbo.Товары ON dbo.[Поставки].Товар_Id = dbo.Товары.Id " +
-            //    "FULL OUTER JOIN dbo.Поставщики ON dbo.Поставщики.Id = dbo.Поставки.[Наименование поставщика] " +
-            //    "FULL OUTER JOIN dbo.[Работники склада] on dbo.Поставки.[ФИО принявшего товар] = dbo.[Работники склада].Id", dataGridViewInputItem);
+            mySqlAplication.Fillcombobox("SELECT Id, Название FROM Товары WHERE Состояние = N'На складе'", "Id", "Название", cb_goodsLoc);
         }
 
         private void b_add_Click(object sender, EventArgs e)
@@ -114,10 +111,39 @@ namespace Warehouse_Complex
                 catch
                 {
                     MessageBox.Show("Ошибка ввода данных", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-               
+                }             
+            }          
+        }
+
+        private void b_addLoc_Click(object sender, EventArgs e)
+        {
+            if (cb_goodsLoc.Text == String.Empty || cb_warehouse.Text == String.Empty || tb_numberShelf.Text == String.Empty)
+            {
+                MessageBox.Show("Не все данные введены", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+            else
+            {
+                try
+                {
+                    mySqlAplication.Connect();
+
+                    SqlCommand command = new SqlCommand(
+                        "INSERT INTO [Расположения товаров] (Товар_Id, Склад_Id, [Номер полки]) " +
+                        "VALUES (@Товар_Id, @Склад_Id, @Номер_полки)", mySqlAplication.sqlConnection);
+
+                    command.Parameters.AddWithValue("Товар_Id", cb_goodsLoc.SelectedValue);
+                    command.Parameters.AddWithValue("Склад_Id", cb_warehouse.SelectedValue);
+                    command.Parameters.AddWithValue("Номер_полки", tb_numberShelf.Text);
+                    command.ExecuteNonQuery();
+
+                    mySqlAplication.sqlConnection.Close();
+                    MessageBox.Show("Данные успешно были добавлены", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show("Ошибка ввода данных", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
     

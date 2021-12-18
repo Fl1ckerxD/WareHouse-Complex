@@ -50,26 +50,39 @@ namespace Warehouse_Complex
             this.cb_size = new System.Windows.Forms.ComboBox();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.Поставщики = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tb_number = new System.Windows.Forms.TextBox();
+            this.tb_nameSupp = new System.Windows.Forms.TextBox();
+            this.tb_adress = new System.Windows.Forms.TextBox();
+            this.b_addSupp = new System.Windows.Forms.Button();
             this.поставщикиTableAdapter = new Warehouse_Complex.Warehouse_ComplexDataSetTableAdapters.ПоставщикиTableAdapter();
             this.работники_складаTableAdapter = new Warehouse_Complex.Warehouse_ComplexDataSetTableAdapters.Работники_складаTableAdapter();
-            this.b_addSupp = new System.Windows.Forms.Button();
-            this.tb_adress = new System.Windows.Forms.TextBox();
-            this.tb_nameSupp = new System.Windows.Forms.TextBox();
-            this.tb_number = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.Расположение_товара = new System.Windows.Forms.TabPage();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tb_numberShelf = new System.Windows.Forms.TextBox();
+            this.cb_goodsLoc = new System.Windows.Forms.ComboBox();
+            this.b_addLoc = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cb_warehouse = new System.Windows.Forms.ComboBox();
+            this.складыBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.складыTableAdapter = new Warehouse_Complex.Warehouse_ComplexDataSetTableAdapters.СкладыTableAdapter();
             this.tabControl1.SuspendLayout();
             this.Поставки.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.работникиСкладаBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehouse_ComplexDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.поставщикиBindingSource)).BeginInit();
             this.Поставщики.SuspendLayout();
+            this.Расположение_товара.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.складыBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.Поставки);
+            this.tabControl1.Controls.Add(this.Расположение_товара);
             this.tabControl1.Controls.Add(this.Поставщики);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
@@ -264,13 +277,53 @@ namespace Warehouse_Complex
             this.Поставщики.Text = "Поставщики";
             this.Поставщики.UseVisualStyleBackColor = true;
             // 
-            // поставщикиTableAdapter
+            // label9
             // 
-            this.поставщикиTableAdapter.ClearBeforeFill = true;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(119, 184);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(52, 13);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Телефон";
             // 
-            // работники_складаTableAdapter
+            // label8
             // 
-            this.работники_складаTableAdapter.ClearBeforeFill = true;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(119, 144);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(108, 13);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Юридический адрес";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(119, 95);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(151, 13);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Наименование  поставщика";
+            // 
+            // tb_number
+            // 
+            this.tb_number.Location = new System.Drawing.Point(114, 199);
+            this.tb_number.Name = "tb_number";
+            this.tb_number.Size = new System.Drawing.Size(125, 20);
+            this.tb_number.TabIndex = 3;
+            // 
+            // tb_nameSupp
+            // 
+            this.tb_nameSupp.Location = new System.Drawing.Point(114, 111);
+            this.tb_nameSupp.Name = "tb_nameSupp";
+            this.tb_nameSupp.Size = new System.Drawing.Size(156, 20);
+            this.tb_nameSupp.TabIndex = 2;
+            // 
+            // tb_adress
+            // 
+            this.tb_adress.Location = new System.Drawing.Point(114, 158);
+            this.tb_adress.Name = "tb_adress";
+            this.tb_adress.Size = new System.Drawing.Size(156, 20);
+            this.tb_adress.TabIndex = 1;
             // 
             // b_addSupp
             // 
@@ -282,53 +335,106 @@ namespace Warehouse_Complex
             this.b_addSupp.UseVisualStyleBackColor = true;
             this.b_addSupp.Click += new System.EventHandler(this.b_addSupp_Click);
             // 
-            // tb_adress
+            // поставщикиTableAdapter
             // 
-            this.tb_adress.Location = new System.Drawing.Point(114, 158);
-            this.tb_adress.Name = "tb_adress";
-            this.tb_adress.Size = new System.Drawing.Size(156, 20);
-            this.tb_adress.TabIndex = 1;
+            this.поставщикиTableAdapter.ClearBeforeFill = true;
             // 
-            // tb_nameSupp
+            // работники_складаTableAdapter
             // 
-            this.tb_nameSupp.Location = new System.Drawing.Point(114, 111);
-            this.tb_nameSupp.Name = "tb_nameSupp";
-            this.tb_nameSupp.Size = new System.Drawing.Size(156, 20);
-            this.tb_nameSupp.TabIndex = 2;
+            this.работники_складаTableAdapter.ClearBeforeFill = true;
             // 
-            // tb_number
+            // Расположение_товара
             // 
-            this.tb_number.Location = new System.Drawing.Point(114, 199);
-            this.tb_number.Name = "tb_number";
-            this.tb_number.Size = new System.Drawing.Size(125, 20);
-            this.tb_number.TabIndex = 3;
+            this.Расположение_товара.Controls.Add(this.label12);
+            this.Расположение_товара.Controls.Add(this.cb_warehouse);
+            this.Расположение_товара.Controls.Add(this.b_addLoc);
+            this.Расположение_товара.Controls.Add(this.label10);
+            this.Расположение_товара.Controls.Add(this.label11);
+            this.Расположение_товара.Controls.Add(this.tb_numberShelf);
+            this.Расположение_товара.Controls.Add(this.cb_goodsLoc);
+            this.Расположение_товара.Location = new System.Drawing.Point(4, 22);
+            this.Расположение_товара.Name = "Расположение_товара";
+            this.Расположение_товара.Size = new System.Drawing.Size(792, 424);
+            this.Расположение_товара.TabIndex = 2;
+            this.Расположение_товара.Text = "Расположение товара";
+            this.Расположение_товара.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // label10
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(119, 95);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(151, 13);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Наименование  поставщика";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(334, 161);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(74, 13);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Номер полки";
             // 
-            // label8
+            // label11
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(119, 144);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 13);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Юридический адрес";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(334, 70);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(38, 13);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "Товар";
             // 
-            // label9
+            // tb_numberShelf
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(119, 184);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 13);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Телефон";
+            this.tb_numberShelf.Location = new System.Drawing.Point(326, 179);
+            this.tb_numberShelf.Name = "tb_numberShelf";
+            this.tb_numberShelf.Size = new System.Drawing.Size(121, 20);
+            this.tb_numberShelf.TabIndex = 22;
+            // 
+            // cb_goodsLoc
+            // 
+            this.cb_goodsLoc.DataSource = this.поставщикиBindingSource;
+            this.cb_goodsLoc.DisplayMember = "Наименование  поставщика";
+            this.cb_goodsLoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_goodsLoc.FormattingEnabled = true;
+            this.cb_goodsLoc.Location = new System.Drawing.Point(326, 86);
+            this.cb_goodsLoc.Name = "cb_goodsLoc";
+            this.cb_goodsLoc.Size = new System.Drawing.Size(121, 21);
+            this.cb_goodsLoc.TabIndex = 21;
+            this.cb_goodsLoc.ValueMember = "Id";
+            // 
+            // b_addLoc
+            // 
+            this.b_addLoc.Location = new System.Drawing.Point(355, 239);
+            this.b_addLoc.Name = "b_addLoc";
+            this.b_addLoc.Size = new System.Drawing.Size(75, 23);
+            this.b_addLoc.TabIndex = 25;
+            this.b_addLoc.Text = "Добавить";
+            this.b_addLoc.UseVisualStyleBackColor = true;
+            this.b_addLoc.Click += new System.EventHandler(this.b_addLoc_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(334, 112);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(38, 13);
+            this.label12.TabIndex = 27;
+            this.label12.Text = "Склад";
+            // 
+            // cb_warehouse
+            // 
+            this.cb_warehouse.DataSource = this.складыBindingSource;
+            this.cb_warehouse.DisplayMember = "Название";
+            this.cb_warehouse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_warehouse.FormattingEnabled = true;
+            this.cb_warehouse.Location = new System.Drawing.Point(326, 128);
+            this.cb_warehouse.Name = "cb_warehouse";
+            this.cb_warehouse.Size = new System.Drawing.Size(121, 21);
+            this.cb_warehouse.TabIndex = 26;
+            this.cb_warehouse.ValueMember = "Id";
+            // 
+            // складыBindingSource
+            // 
+            this.складыBindingSource.DataMember = "Склады";
+            this.складыBindingSource.DataSource = this.warehouse_ComplexDataSet;
+            // 
+            // складыTableAdapter
+            // 
+            this.складыTableAdapter.ClearBeforeFill = true;
             // 
             // InputItem
             // 
@@ -348,6 +454,9 @@ namespace Warehouse_Complex
             ((System.ComponentModel.ISupportInitialize)(this.поставщикиBindingSource)).EndInit();
             this.Поставщики.ResumeLayout(false);
             this.Поставщики.PerformLayout();
+            this.Расположение_товара.ResumeLayout(false);
+            this.Расположение_товара.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.складыBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -383,5 +492,15 @@ namespace Warehouse_Complex
         private System.Windows.Forms.TextBox tb_nameSupp;
         private System.Windows.Forms.TextBox tb_adress;
         private System.Windows.Forms.Button b_addSupp;
+        private System.Windows.Forms.TabPage Расположение_товара;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox cb_warehouse;
+        private System.Windows.Forms.Button b_addLoc;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox tb_numberShelf;
+        private System.Windows.Forms.ComboBox cb_goodsLoc;
+        private System.Windows.Forms.BindingSource складыBindingSource;
+        private Warehouse_ComplexDataSetTableAdapters.СкладыTableAdapter складыTableAdapter;
     }
 }

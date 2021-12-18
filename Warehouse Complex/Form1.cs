@@ -40,9 +40,14 @@ namespace Warehouse_Complex
             loadform(new Directory());
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void b_sup_Click(object sender, EventArgs e)
         {
             loadform(new InputItem());
+        }
+
+        private void b_rec_Click(object sender, EventArgs e)
+        {
+            loadform(new OutputItem());
         }
     }
 }

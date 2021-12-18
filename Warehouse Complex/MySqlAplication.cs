@@ -31,8 +31,27 @@ namespace Warehouse_Complex
         }
         public void SearchItem(DataGridView dataGridView, ComboBox comboBox, TextBox tb_searcher)
         {
-            (dataGridView.DataSource as DataTable).DefaultView.RowFilter = $"[{comboBox.Text}] LIKE '%{tb_searcher.Text}%'";
-        }
+            try
+            {
+                (dataGridView.DataSource as DataTable).DefaultView.RowFilter = $"[{comboBox.Text}] LIKE '%{tb_searcher.Text}%'";
+            }
+            catch
+            {
 
+            }        
+        }
+        public void Fillcombobox(string com, string valueMem, string displayMem, ComboBox comboBox)
+        {
+            Connect();
+
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(com, sqlConnection);
+            DataSet dataSet = new DataSet();
+            dataAdapter.Fill(dataSet);
+
+            comboBox.DataSource = dataSet.Tables[0];
+            comboBox.ValueMember = valueMem;
+            comboBox.DisplayMember = displayMem;
+            sqlConnection.Close();
+        }
     }
 }

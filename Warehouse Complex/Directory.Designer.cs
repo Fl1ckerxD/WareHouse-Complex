@@ -508,6 +508,7 @@ namespace Warehouse_Complex
             this.tb_searcherSup.Name = "tb_searcherSup";
             this.tb_searcherSup.Size = new System.Drawing.Size(281, 20);
             this.tb_searcherSup.TabIndex = 10;
+            this.tb_searcherSup.TextChanged += new System.EventHandler(this.tb_searcherSup_TextChanged);
             // 
             // cb_columnsSup
             // 
@@ -578,6 +579,7 @@ namespace Warehouse_Complex
             this.tb_searcherRec.Name = "tb_searcherRec";
             this.tb_searcherRec.Size = new System.Drawing.Size(281, 20);
             this.tb_searcherRec.TabIndex = 15;
+            this.tb_searcherRec.TextChanged += new System.EventHandler(this.tb_searcherRec_TextChanged);
             // 
             // cb_columnsRec
             // 

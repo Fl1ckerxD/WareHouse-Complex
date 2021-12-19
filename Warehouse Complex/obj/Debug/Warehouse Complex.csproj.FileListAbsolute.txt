@@ -43,3 +43,4 @@ D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse Complex.csproj
 D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse Complex.exe
 D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse Complex.pdb
 D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse_Complex.OutputItem.resources
+D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse_Complex.SignIn.resources

@@ -34,6 +34,7 @@ namespace Warehouse_Complex
             this.b_signin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.b_registr = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tb_login
@@ -78,11 +79,22 @@ namespace Warehouse_Complex
             this.label2.TabIndex = 4;
             this.label2.Text = "Пароль";
             // 
+            // b_registr
+            // 
+            this.b_registr.Location = new System.Drawing.Point(318, 252);
+            this.b_registr.Name = "b_registr";
+            this.b_registr.Size = new System.Drawing.Size(87, 23);
+            this.b_registr.TabIndex = 5;
+            this.b_registr.Text = "Регистрация";
+            this.b_registr.UseVisualStyleBackColor = true;
+            this.b_registr.Click += new System.EventHandler(this.b_registr_Click);
+            // 
             // SignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.b_registr);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.b_signin);
@@ -102,5 +114,6 @@ namespace Warehouse_Complex
         private System.Windows.Forms.Button b_signin;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button b_registr;
     }
 }

@@ -58,7 +58,7 @@ namespace Warehouse_Complex
                         "VALUES (@Дата, @Товар_Id, @Наименование_поставщика, @ФИО_принявшего_товар, @ФИО_сдавшего_товар)", mySqlAplication.sqlConnection);
 
                     command.Parameters.AddWithValue("Дата", dateTimePicker.Value);
-                    command.Parameters.AddWithValue("Товар_Id", idGood().ToString());
+                    command.Parameters.AddWithValue("Товар_Id", idGood());
                     command.Parameters.AddWithValue("Наименование_поставщика", cb_nameSupplier.SelectedValue);
                     command.Parameters.AddWithValue("ФИО_принявшего_товар", cb_fio.SelectedValue);
                     command.Parameters.AddWithValue("ФИО_сдавшего_товар", tb_fioGiver.Text);
@@ -74,14 +74,14 @@ namespace Warehouse_Complex
             }
             
         }
-        private int idGood()
+        private string idGood()
         {          
             SqlDataAdapter dataAdapter = new SqlDataAdapter("Select id from [Товары]", mySqlAplication.sqlConnection);
             DataTable dataTable = new DataTable();
 
             dataAdapter.Fill(dataTable);
 
-            return Convert.ToInt32(dataTable.Rows[dataTable.Rows.Count - 1][0]);
+            return Convert.ToString(dataTable.Rows[dataTable.Rows.Count - 1][0]);
         }
 
         private void b_addSupp_Click(object sender, EventArgs e)

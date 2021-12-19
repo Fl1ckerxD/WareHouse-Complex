@@ -62,5 +62,12 @@ namespace Warehouse_Complex
             mainWin.Show();
             this.Hide();
         }
+
+        private void b_registr_Click(object sender, EventArgs e)
+        {
+            Registration registration = new Registration();
+            registration.Show();
+            this.Hide();
+        }
     }
 }

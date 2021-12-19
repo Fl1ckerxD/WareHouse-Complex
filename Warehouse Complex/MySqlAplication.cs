@@ -13,6 +13,7 @@ namespace Warehouse_Complex
     class MySqlAplication
     {
         public SqlConnection sqlConnection = null;
+        public static int typeUser = 0;
         public void Connect()
         {
             sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString);

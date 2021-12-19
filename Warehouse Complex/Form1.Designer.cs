@@ -116,7 +116,7 @@ namespace Warehouse_Complex
             this.p_showing.Dock = System.Windows.Forms.DockStyle.Fill;
             this.p_showing.Location = new System.Drawing.Point(200, 0);
             this.p_showing.Name = "p_showing";
-            this.p_showing.Size = new System.Drawing.Size(950, 586);
+            this.p_showing.Size = new System.Drawing.Size(784, 586);
             this.p_showing.TabIndex = 1;
             // 
             // Form1
@@ -124,11 +124,12 @@ namespace Warehouse_Complex
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1150, 586);
+            this.ClientSize = new System.Drawing.Size(984, 586);
             this.Controls.Add(this.p_showing);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MinimumSize = new System.Drawing.Size(1000, 625);
             this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Главное окно";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

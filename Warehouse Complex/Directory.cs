@@ -57,6 +57,26 @@ namespace Warehouse_Complex
                 "dbo.Товары ON dbo.[Расходы].Товар_Id = dbo.Товары.Id " +
                 "INNER JOIN dbo.Получатели ON dbo.Получатели.Id = dbo.Расходы.[Наименование получателя] " +
                 "INNER JOIN dbo.[Работники склада] on dbo.Расходы.[ФИО сдавшего товар] = dbo.[Работники склада].Id", dataGridView_Rec);
+
+            switch (MySqlAplication.typeUser)
+            {
+                case 0:
+                    b_addWarehouse.Visible = false;
+                    b_change.Visible = false;
+                    break;
+                case 1:
+                    b_addWarehouse.Visible = true;
+                    b_change.Visible = true;
+                    break;
+                case 2:
+                    b_addWarehouse.Visible = true;
+                    b_change.Visible = true;
+                    break;
+                case 3:
+                    b_addWarehouse.Visible = false;
+                    b_change.Visible = false;
+                    break;
+            }
         }
         private void tb_searcherWarehouse_TextChanged(object sender, EventArgs e)
         {
@@ -87,6 +107,18 @@ namespace Warehouse_Complex
         private void tb_searcherRec_TextChanged(object sender, EventArgs e)
         {
             mySqlAplication.SearchItem(dataGridView_Rec, cb_columnsRec, tb_searcherRec);
+        }
+
+        private void b_change_Click(object sender, EventArgs e)
+        {
+            ChangeUser changeUser = new ChangeUser();
+            changeUser.Show();
+        }
+
+        private void b_addWarehouse_Click(object sender, EventArgs e)
+        {
+            Addwarehouse addwarehouse = new Addwarehouse();
+            addwarehouse.Show();
         }
     }
 }

@@ -39,23 +39,33 @@ namespace Warehouse_Complex
             // 
             // tb_login
             // 
-            this.tb_login.Location = new System.Drawing.Point(315, 105);
+            this.tb_login.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tb_login.Location = new System.Drawing.Point(144, 95);
             this.tb_login.Name = "tb_login";
-            this.tb_login.Size = new System.Drawing.Size(100, 20);
+            this.tb_login.Size = new System.Drawing.Size(176, 29);
             this.tb_login.TabIndex = 0;
             // 
             // tb_password
             // 
-            this.tb_password.Location = new System.Drawing.Point(315, 162);
+            this.tb_password.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tb_password.Location = new System.Drawing.Point(144, 169);
             this.tb_password.Name = "tb_password";
-            this.tb_password.Size = new System.Drawing.Size(100, 20);
+            this.tb_password.PasswordChar = '*';
+            this.tb_password.Size = new System.Drawing.Size(176, 29);
             this.tb_password.TabIndex = 1;
             // 
             // b_signin
             // 
-            this.b_signin.Location = new System.Drawing.Point(328, 223);
+            this.b_signin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.b_signin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.b_signin.Location = new System.Drawing.Point(190, 229);
             this.b_signin.Name = "b_signin";
-            this.b_signin.Size = new System.Drawing.Size(75, 23);
+            this.b_signin.Size = new System.Drawing.Size(91, 44);
             this.b_signin.TabIndex = 2;
             this.b_signin.Text = "Войти";
             this.b_signin.UseVisualStyleBackColor = true;
@@ -63,27 +73,36 @@ namespace Warehouse_Complex
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(315, 86);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(195, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.Size = new System.Drawing.Size(64, 24);
             this.label1.TabIndex = 3;
             this.label1.Text = "Логин";
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(315, 146);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(195, 142);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.Size = new System.Drawing.Size(76, 24);
             this.label2.TabIndex = 4;
             this.label2.Text = "Пароль";
             // 
             // b_registr
             // 
-            this.b_registr.Location = new System.Drawing.Point(318, 252);
+            this.b_registr.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.b_registr.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.b_registr.Location = new System.Drawing.Point(151, 288);
             this.b_registr.Name = "b_registr";
-            this.b_registr.Size = new System.Drawing.Size(87, 23);
+            this.b_registr.Size = new System.Drawing.Size(170, 44);
             this.b_registr.TabIndex = 5;
             this.b_registr.Text = "Регистрация";
             this.b_registr.UseVisualStyleBackColor = true;
@@ -93,14 +112,17 @@ namespace Warehouse_Complex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(457, 396);
             this.Controls.Add(this.b_registr);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.b_signin);
             this.Controls.Add(this.tb_password);
             this.Controls.Add(this.tb_login);
+            this.MinimumSize = new System.Drawing.Size(473, 435);
             this.Name = "SignIn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Авторизация";
             this.ResumeLayout(false);
             this.PerformLayout();

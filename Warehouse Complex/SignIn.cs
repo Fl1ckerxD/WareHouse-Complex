@@ -38,14 +38,17 @@ namespace Warehouse_Complex
                     switch (dataTable.Rows[0][2])
                     {
                         case 1:
+                            MySqlAplication.typeUser = 1;
                             ShowMainWin();
                             break;
 
                         case 2:
+                            MySqlAplication.typeUser = 2;
                             ShowMainWin();
                             break;
 
                         case 3:
+                            MySqlAplication.typeUser = 3;
                             ShowMainWin();
                             break;
                     }

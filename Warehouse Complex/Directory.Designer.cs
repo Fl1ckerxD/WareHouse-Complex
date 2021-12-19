@@ -31,6 +31,7 @@ namespace Warehouse_Complex
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tp_warehouses = new System.Windows.Forms.TabPage();
+            this.b_addWarehouse = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tb_searcherWarehouse = new System.Windows.Forms.TextBox();
@@ -55,6 +56,7 @@ namespace Warehouse_Complex
             this.cb_columnsSuppliers = new System.Windows.Forms.ComboBox();
             this.dataGridView_Suppliers = new System.Windows.Forms.DataGridView();
             this.tp_warehouseWorkers = new System.Windows.Forms.TabPage();
+            this.b_change = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.tb_searcherWarehouseWorkers = new System.Windows.Forms.TextBox();
@@ -108,6 +110,7 @@ namespace Warehouse_Complex
             // tp_warehouses
             // 
             this.tp_warehouses.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.tp_warehouses.Controls.Add(this.b_addWarehouse);
             this.tp_warehouses.Controls.Add(this.label2);
             this.tp_warehouses.Controls.Add(this.label1);
             this.tp_warehouses.Controls.Add(this.tb_searcherWarehouse);
@@ -121,14 +124,27 @@ namespace Warehouse_Complex
             this.tp_warehouses.TabIndex = 1;
             this.tp_warehouses.Text = "Склады";
             // 
+            // b_addWarehouse
+            // 
+            this.b_addWarehouse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.b_addWarehouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.b_addWarehouse.Location = new System.Drawing.Point(705, 6);
+            this.b_addWarehouse.Name = "b_addWarehouse";
+            this.b_addWarehouse.Size = new System.Drawing.Size(81, 33);
+            this.b_addWarehouse.TabIndex = 9;
+            this.b_addWarehouse.Text = "Добавить";
+            this.b_addWarehouse.UseVisualStyleBackColor = true;
+            this.b_addWarehouse.Click += new System.EventHandler(this.b_addWarehouse_Click);
+            // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(335, 22);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(335, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.Size = new System.Drawing.Size(79, 16);
             this.label2.TabIndex = 4;
             this.label2.Text = "Поисковик";
             // 
@@ -137,9 +153,10 @@ namespace Warehouse_Complex
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(158, 22);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(158, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.Size = new System.Drawing.Size(64, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "Столбец";
             // 
@@ -147,23 +164,25 @@ namespace Warehouse_Complex
             // 
             this.tb_searcherWarehouse.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_searcherWarehouse.Location = new System.Drawing.Point(325, 42);
+            this.tb_searcherWarehouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tb_searcherWarehouse.Location = new System.Drawing.Point(325, 44);
             this.tb_searcherWarehouse.Name = "tb_searcherWarehouse";
-            this.tb_searcherWarehouse.Size = new System.Drawing.Size(281, 20);
+            this.tb_searcherWarehouse.Size = new System.Drawing.Size(281, 22);
             this.tb_searcherWarehouse.TabIndex = 2;
             this.tb_searcherWarehouse.TextChanged += new System.EventHandler(this.tb_searcherWarehouse_TextChanged);
             // 
             // cb_columnsWarehouse
             // 
             this.cb_columnsWarehouse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_columnsWarehouse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cb_columnsWarehouse.FormattingEnabled = true;
             this.cb_columnsWarehouse.Items.AddRange(new object[] {
             "Название",
             "Тип",
             "Заведующий"});
-            this.cb_columnsWarehouse.Location = new System.Drawing.Point(143, 41);
+            this.cb_columnsWarehouse.Location = new System.Drawing.Point(143, 42);
             this.cb_columnsWarehouse.Name = "cb_columnsWarehouse";
-            this.cb_columnsWarehouse.Size = new System.Drawing.Size(176, 21);
+            this.cb_columnsWarehouse.Size = new System.Drawing.Size(176, 24);
             this.cb_columnsWarehouse.TabIndex = 1;
             // 
             // dataGridView_Warehouse
@@ -198,9 +217,10 @@ namespace Warehouse_Complex
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(335, 22);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(335, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 13);
+            this.label3.Size = new System.Drawing.Size(79, 16);
             this.label3.TabIndex = 7;
             this.label3.Text = "Поисковик";
             // 
@@ -209,9 +229,10 @@ namespace Warehouse_Complex
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(158, 22);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(158, 23);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.Size = new System.Drawing.Size(64, 16);
             this.label4.TabIndex = 6;
             this.label4.Text = "Столбец";
             // 
@@ -219,24 +240,26 @@ namespace Warehouse_Complex
             // 
             this.tb_searcherGood.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_searcherGood.Location = new System.Drawing.Point(325, 42);
+            this.tb_searcherGood.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tb_searcherGood.Location = new System.Drawing.Point(325, 44);
             this.tb_searcherGood.Name = "tb_searcherGood";
-            this.tb_searcherGood.Size = new System.Drawing.Size(281, 20);
+            this.tb_searcherGood.Size = new System.Drawing.Size(281, 22);
             this.tb_searcherGood.TabIndex = 5;
             this.tb_searcherGood.TextChanged += new System.EventHandler(this.tb_searcherGood_TextChanged);
             // 
             // cb_columnsGood
             // 
             this.cb_columnsGood.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_columnsGood.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cb_columnsGood.FormattingEnabled = true;
             this.cb_columnsGood.Items.AddRange(new object[] {
             "Название",
             "Размер",
             "Состояние",
             "Название склада"});
-            this.cb_columnsGood.Location = new System.Drawing.Point(143, 41);
+            this.cb_columnsGood.Location = new System.Drawing.Point(143, 42);
             this.cb_columnsGood.Name = "cb_columnsGood";
-            this.cb_columnsGood.Size = new System.Drawing.Size(176, 21);
+            this.cb_columnsGood.Size = new System.Drawing.Size(176, 24);
             this.cb_columnsGood.TabIndex = 4;
             // 
             // dataGridView_Good
@@ -271,9 +294,10 @@ namespace Warehouse_Complex
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(335, 22);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(335, 24);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 13);
+            this.label5.Size = new System.Drawing.Size(79, 16);
             this.label5.TabIndex = 7;
             this.label5.Text = "Поисковик";
             // 
@@ -282,9 +306,10 @@ namespace Warehouse_Complex
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(158, 22);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(158, 23);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 13);
+            this.label6.Size = new System.Drawing.Size(64, 16);
             this.label6.TabIndex = 6;
             this.label6.Text = "Столбец";
             // 
@@ -292,23 +317,25 @@ namespace Warehouse_Complex
             // 
             this.tb_searcherRecipients.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_searcherRecipients.Location = new System.Drawing.Point(325, 42);
+            this.tb_searcherRecipients.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tb_searcherRecipients.Location = new System.Drawing.Point(325, 44);
             this.tb_searcherRecipients.Name = "tb_searcherRecipients";
-            this.tb_searcherRecipients.Size = new System.Drawing.Size(281, 20);
+            this.tb_searcherRecipients.Size = new System.Drawing.Size(281, 22);
             this.tb_searcherRecipients.TabIndex = 5;
             this.tb_searcherRecipients.TextChanged += new System.EventHandler(this.tb_searcherRecipients_TextChanged);
             // 
             // cb_columnsRecipients
             // 
             this.cb_columnsRecipients.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_columnsRecipients.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cb_columnsRecipients.FormattingEnabled = true;
             this.cb_columnsRecipients.Items.AddRange(new object[] {
             "Наименование получателя",
             "Юридический адрес",
             "Телефон"});
-            this.cb_columnsRecipients.Location = new System.Drawing.Point(143, 41);
+            this.cb_columnsRecipients.Location = new System.Drawing.Point(143, 42);
             this.cb_columnsRecipients.Name = "cb_columnsRecipients";
-            this.cb_columnsRecipients.Size = new System.Drawing.Size(176, 21);
+            this.cb_columnsRecipients.Size = new System.Drawing.Size(176, 24);
             this.cb_columnsRecipients.TabIndex = 4;
             // 
             // dataGridView_Recipients
@@ -343,9 +370,10 @@ namespace Warehouse_Complex
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(335, 22);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(335, 24);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 13);
+            this.label7.Size = new System.Drawing.Size(79, 16);
             this.label7.TabIndex = 7;
             this.label7.Text = "Поисковик";
             // 
@@ -354,31 +382,34 @@ namespace Warehouse_Complex
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(158, 22);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(158, 23);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 13);
+            this.label8.Size = new System.Drawing.Size(64, 16);
             this.label8.TabIndex = 6;
             this.label8.Text = "Столбец";
             // 
             // tb_searcherSuppliers
             // 
-            this.tb_searcherSuppliers.Location = new System.Drawing.Point(325, 42);
+            this.tb_searcherSuppliers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tb_searcherSuppliers.Location = new System.Drawing.Point(325, 44);
             this.tb_searcherSuppliers.Name = "tb_searcherSuppliers";
-            this.tb_searcherSuppliers.Size = new System.Drawing.Size(281, 20);
+            this.tb_searcherSuppliers.Size = new System.Drawing.Size(281, 22);
             this.tb_searcherSuppliers.TabIndex = 5;
             this.tb_searcherSuppliers.TextChanged += new System.EventHandler(this.tb_searcherSuppliers_TextChanged);
             // 
             // cb_columnsSuppliers
             // 
             this.cb_columnsSuppliers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_columnsSuppliers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cb_columnsSuppliers.FormattingEnabled = true;
             this.cb_columnsSuppliers.Items.AddRange(new object[] {
             "Наименование поставщика",
             "Юридический адрес",
             "Телефон"});
-            this.cb_columnsSuppliers.Location = new System.Drawing.Point(143, 41);
+            this.cb_columnsSuppliers.Location = new System.Drawing.Point(143, 42);
             this.cb_columnsSuppliers.Name = "cb_columnsSuppliers";
-            this.cb_columnsSuppliers.Size = new System.Drawing.Size(176, 21);
+            this.cb_columnsSuppliers.Size = new System.Drawing.Size(176, 24);
             this.cb_columnsSuppliers.TabIndex = 4;
             // 
             // dataGridView_Suppliers
@@ -396,6 +427,7 @@ namespace Warehouse_Complex
             // tp_warehouseWorkers
             // 
             this.tp_warehouseWorkers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.tp_warehouseWorkers.Controls.Add(this.b_change);
             this.tp_warehouseWorkers.Controls.Add(this.label9);
             this.tp_warehouseWorkers.Controls.Add(this.label10);
             this.tp_warehouseWorkers.Controls.Add(this.tb_searcherWarehouseWorkers);
@@ -408,14 +440,27 @@ namespace Warehouse_Complex
             this.tp_warehouseWorkers.TabIndex = 5;
             this.tp_warehouseWorkers.Text = "Работники склада";
             // 
+            // b_change
+            // 
+            this.b_change.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.b_change.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.b_change.Location = new System.Drawing.Point(705, 6);
+            this.b_change.Name = "b_change";
+            this.b_change.Size = new System.Drawing.Size(81, 33);
+            this.b_change.TabIndex = 8;
+            this.b_change.Text = "Изменить";
+            this.b_change.UseVisualStyleBackColor = true;
+            this.b_change.Click += new System.EventHandler(this.b_change_Click);
+            // 
             // label9
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(335, 22);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(335, 24);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(63, 13);
+            this.label9.Size = new System.Drawing.Size(79, 16);
             this.label9.TabIndex = 7;
             this.label9.Text = "Поисковик";
             // 
@@ -424,32 +469,35 @@ namespace Warehouse_Complex
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(158, 22);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(158, 23);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 13);
+            this.label10.Size = new System.Drawing.Size(64, 16);
             this.label10.TabIndex = 6;
             this.label10.Text = "Столбец";
             // 
             // tb_searcherWarehouseWorkers
             // 
-            this.tb_searcherWarehouseWorkers.Location = new System.Drawing.Point(325, 42);
+            this.tb_searcherWarehouseWorkers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tb_searcherWarehouseWorkers.Location = new System.Drawing.Point(325, 44);
             this.tb_searcherWarehouseWorkers.Name = "tb_searcherWarehouseWorkers";
-            this.tb_searcherWarehouseWorkers.Size = new System.Drawing.Size(281, 20);
+            this.tb_searcherWarehouseWorkers.Size = new System.Drawing.Size(281, 22);
             this.tb_searcherWarehouseWorkers.TabIndex = 5;
             this.tb_searcherWarehouseWorkers.TextChanged += new System.EventHandler(this.tb_searcherWarehouseWorkers_TextChanged);
             // 
             // cb_columnsWarehouseWorkers
             // 
             this.cb_columnsWarehouseWorkers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_columnsWarehouseWorkers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cb_columnsWarehouseWorkers.FormattingEnabled = true;
             this.cb_columnsWarehouseWorkers.Items.AddRange(new object[] {
             "Фамилия",
             "Имя",
             "Отчество",
             "Должность"});
-            this.cb_columnsWarehouseWorkers.Location = new System.Drawing.Point(143, 41);
+            this.cb_columnsWarehouseWorkers.Location = new System.Drawing.Point(143, 42);
             this.cb_columnsWarehouseWorkers.Name = "cb_columnsWarehouseWorkers";
-            this.cb_columnsWarehouseWorkers.Size = new System.Drawing.Size(176, 21);
+            this.cb_columnsWarehouseWorkers.Size = new System.Drawing.Size(176, 24);
             this.cb_columnsWarehouseWorkers.TabIndex = 4;
             // 
             // dataGridView_WarehouseWorkers
@@ -483,9 +531,10 @@ namespace Warehouse_Complex
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(335, 22);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(335, 24);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(63, 13);
+            this.label11.Size = new System.Drawing.Size(79, 16);
             this.label11.TabIndex = 12;
             this.label11.Text = "Поисковик";
             // 
@@ -494,9 +543,10 @@ namespace Warehouse_Complex
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(158, 22);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(158, 23);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(49, 13);
+            this.label12.Size = new System.Drawing.Size(64, 16);
             this.label12.TabIndex = 11;
             this.label12.Text = "Столбец";
             // 
@@ -504,23 +554,25 @@ namespace Warehouse_Complex
             // 
             this.tb_searcherSup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_searcherSup.Location = new System.Drawing.Point(325, 42);
+            this.tb_searcherSup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tb_searcherSup.Location = new System.Drawing.Point(325, 44);
             this.tb_searcherSup.Name = "tb_searcherSup";
-            this.tb_searcherSup.Size = new System.Drawing.Size(281, 20);
+            this.tb_searcherSup.Size = new System.Drawing.Size(281, 22);
             this.tb_searcherSup.TabIndex = 10;
             this.tb_searcherSup.TextChanged += new System.EventHandler(this.tb_searcherSup_TextChanged);
             // 
             // cb_columnsSup
             // 
             this.cb_columnsSup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_columnsSup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cb_columnsSup.FormattingEnabled = true;
             this.cb_columnsSup.Items.AddRange(new object[] {
             "Наименование поставщика",
             "ФИО принявшего товар",
             "ФИО сдавшего товар"});
-            this.cb_columnsSup.Location = new System.Drawing.Point(143, 41);
+            this.cb_columnsSup.Location = new System.Drawing.Point(143, 42);
             this.cb_columnsSup.Name = "cb_columnsSup";
-            this.cb_columnsSup.Size = new System.Drawing.Size(176, 21);
+            this.cb_columnsSup.Size = new System.Drawing.Size(176, 24);
             this.cb_columnsSup.TabIndex = 9;
             // 
             // dataGridView_Sup
@@ -554,9 +606,10 @@ namespace Warehouse_Complex
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(335, 22);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.Location = new System.Drawing.Point(335, 24);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(63, 13);
+            this.label13.Size = new System.Drawing.Size(79, 16);
             this.label13.TabIndex = 17;
             this.label13.Text = "Поисковик";
             // 
@@ -565,9 +618,10 @@ namespace Warehouse_Complex
             this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(158, 22);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.Location = new System.Drawing.Point(158, 23);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(49, 13);
+            this.label14.Size = new System.Drawing.Size(64, 16);
             this.label14.TabIndex = 16;
             this.label14.Text = "Столбец";
             // 
@@ -575,23 +629,25 @@ namespace Warehouse_Complex
             // 
             this.tb_searcherRec.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_searcherRec.Location = new System.Drawing.Point(325, 42);
+            this.tb_searcherRec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tb_searcherRec.Location = new System.Drawing.Point(325, 44);
             this.tb_searcherRec.Name = "tb_searcherRec";
-            this.tb_searcherRec.Size = new System.Drawing.Size(281, 20);
+            this.tb_searcherRec.Size = new System.Drawing.Size(281, 22);
             this.tb_searcherRec.TabIndex = 15;
             this.tb_searcherRec.TextChanged += new System.EventHandler(this.tb_searcherRec_TextChanged);
             // 
             // cb_columnsRec
             // 
             this.cb_columnsRec.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_columnsRec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cb_columnsRec.FormattingEnabled = true;
             this.cb_columnsRec.Items.AddRange(new object[] {
             "Наименование получателя",
             "ФИО принявшего товар",
             "ФИО сдавшего товар"});
-            this.cb_columnsRec.Location = new System.Drawing.Point(143, 41);
+            this.cb_columnsRec.Location = new System.Drawing.Point(143, 42);
             this.cb_columnsRec.Name = "cb_columnsRec";
-            this.cb_columnsRec.Size = new System.Drawing.Size(176, 21);
+            this.cb_columnsRec.Size = new System.Drawing.Size(176, 24);
             this.cb_columnsRec.TabIndex = 14;
             // 
             // dataGridView_Rec
@@ -688,5 +744,7 @@ namespace Warehouse_Complex
         private System.Windows.Forms.TextBox tb_searcherRec;
         private System.Windows.Forms.ComboBox cb_columnsRec;
         private System.Windows.Forms.DataGridView dataGridView_Rec;
+        private System.Windows.Forms.Button b_change;
+        private System.Windows.Forms.Button b_addWarehouse;
     }
 }

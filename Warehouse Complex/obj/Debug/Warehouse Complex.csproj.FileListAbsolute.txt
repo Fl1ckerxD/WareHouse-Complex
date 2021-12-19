@@ -45,3 +45,5 @@ D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse Complex.pdb
 D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse_Complex.OutputItem.resources
 D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse_Complex.SignIn.resources
 D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse_Complex.Registration.resources
+D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse_Complex.ChangeUser.resources
+D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse_Complex.Addwarehouse.resources

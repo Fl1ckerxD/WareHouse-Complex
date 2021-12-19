@@ -49,7 +49,7 @@ CREATE TABLE [dbo].[Склады] (
     [Id]         INT           IDENTITY (1, 1) NOT NULL,
     [Название]   NVARCHAR (50) NOT NULL,
     [Тип]        NCHAR (5)     NOT NULL,
-    [Заведующий] INT           NOT NULL,
+    [Заведующий] INT           NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC),
     CONSTRAINT [FK_Склады_ToРаботники склада] FOREIGN KEY ([Заведующий]) REFERENCES [dbo].[Работники склада] ([Id])
 );

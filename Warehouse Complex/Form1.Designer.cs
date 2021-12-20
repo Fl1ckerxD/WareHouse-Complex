@@ -29,6 +29,7 @@ namespace Warehouse_Complex
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.b_directory = new System.Windows.Forms.Button();
             this.b_sup = new System.Windows.Forms.Button();
@@ -67,6 +68,7 @@ namespace Warehouse_Complex
             // 
             this.b_directory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.b_directory.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.b_directory.Location = new System.Drawing.Point(4, 46);
             this.b_directory.Name = "b_directory";
             this.b_directory.Size = new System.Drawing.Size(192, 97);
@@ -79,6 +81,7 @@ namespace Warehouse_Complex
             // 
             this.b_sup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.b_sup.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.b_sup.Location = new System.Drawing.Point(4, 192);
             this.b_sup.Name = "b_sup";
             this.b_sup.Size = new System.Drawing.Size(192, 97);
@@ -91,6 +94,7 @@ namespace Warehouse_Complex
             // 
             this.b_rec.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.b_rec.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.b_rec.Location = new System.Drawing.Point(4, 338);
             this.b_rec.Name = "b_rec";
             this.b_rec.Size = new System.Drawing.Size(192, 97);
@@ -103,6 +107,7 @@ namespace Warehouse_Complex
             // 
             this.b_aboutProgram.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.b_aboutProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.b_aboutProgram.Location = new System.Drawing.Point(4, 529);
             this.b_aboutProgram.Name = "b_aboutProgram";
             this.b_aboutProgram.Size = new System.Drawing.Size(192, 53);
@@ -127,10 +132,11 @@ namespace Warehouse_Complex
             this.ClientSize = new System.Drawing.Size(984, 586);
             this.Controls.Add(this.p_showing);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1000, 625);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Главное окно";
+            this.Text = "Складской комплекс";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

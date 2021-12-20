@@ -29,6 +29,7 @@ namespace Warehouse_Complex
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignIn));
             this.tb_login = new System.Windows.Forms.TextBox();
             this.tb_password = new System.Windows.Forms.TextBox();
             this.b_signin = new System.Windows.Forms.Button();
@@ -120,6 +121,7 @@ namespace Warehouse_Complex
             this.Controls.Add(this.b_signin);
             this.Controls.Add(this.tb_password);
             this.Controls.Add(this.tb_login);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(473, 435);
             this.Name = "SignIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

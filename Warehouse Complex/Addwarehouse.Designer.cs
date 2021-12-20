@@ -34,6 +34,7 @@ namespace Warehouse_Complex
             System.Windows.Forms.Label фамилияLabel;
             System.Windows.Forms.Label имяLabel;
             System.Windows.Forms.Label отчествоLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Addwarehouse));
             this.warehouse_ComplexDataSet = new Warehouse_Complex.Warehouse_ComplexDataSet();
             this.работникиСкладаBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.работники_складаTableAdapter = new Warehouse_Complex.Warehouse_ComplexDataSetTableAdapters.Работники_складаTableAdapter();
@@ -348,6 +349,7 @@ namespace Warehouse_Complex
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "Addwarehouse";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

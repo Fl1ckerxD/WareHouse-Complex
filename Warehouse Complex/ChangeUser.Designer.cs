@@ -38,6 +38,7 @@ namespace Warehouse_Complex
             System.Windows.Forms.Label label2;
             System.Windows.Forms.Label label3;
             System.Windows.Forms.Label label4;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangeUser));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tb_workers = new System.Windows.Forms.TabPage();
             this.b_update = new System.Windows.Forms.Button();
@@ -323,11 +324,12 @@ namespace Warehouse_Complex
             // 
             this.cb_typeUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cb_typeUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_typeUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cb_typeUser.FormattingEnabled = true;
             this.cb_typeUser.Location = new System.Drawing.Point(434, 148);
             this.cb_typeUser.Name = "cb_typeUser";
-            this.cb_typeUser.Size = new System.Drawing.Size(189, 32);
+            this.cb_typeUser.Size = new System.Drawing.Size(168, 32);
             this.cb_typeUser.TabIndex = 50;
             // 
             // b_updateUser
@@ -403,6 +405,7 @@ namespace Warehouse_Complex
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "ChangeUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

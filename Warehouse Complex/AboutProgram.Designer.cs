@@ -126,7 +126,6 @@ namespace Warehouse_Complex
             // 
             // textBoxDescription
             // 
-            this.textBoxDescription.AccessibleDescription = "";
             this.textBoxDescription.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxDescription.Location = new System.Drawing.Point(143, 107);
             this.textBoxDescription.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
@@ -153,7 +152,7 @@ namespace Warehouse_Complex
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "О программе";
+            this.Text = "AboutProgram";
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();

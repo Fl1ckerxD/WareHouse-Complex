@@ -29,6 +29,7 @@ namespace Warehouse_Complex
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
             this.tb_login = new System.Windows.Forms.TextBox();
             this.b_reg = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,6 +42,10 @@ namespace Warehouse_Complex
             this.label5 = new System.Windows.Forms.Label();
             this.tb_patronic = new System.Windows.Forms.TextBox();
             this.b_back = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tb_login
@@ -164,12 +169,64 @@ namespace Warehouse_Complex
             this.b_back.UseVisualStyleBackColor = true;
             this.b_back.Click += new System.EventHandler(this.b_back_Click);
             // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(120, 92);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(17, 24);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "*";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(133, 153);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(17, 24);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "*";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(346, 92);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(17, 24);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "*";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(302, 153);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(17, 24);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "*";
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(457, 396);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.b_back);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tb_patronic);
@@ -182,6 +239,7 @@ namespace Warehouse_Complex
             this.Controls.Add(this.label1);
             this.Controls.Add(this.b_reg);
             this.Controls.Add(this.tb_login);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(473, 435);
             this.Name = "Registration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -205,5 +263,9 @@ namespace Warehouse_Complex
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tb_patronic;
         private System.Windows.Forms.Button b_back;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }

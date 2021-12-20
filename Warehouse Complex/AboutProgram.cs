@@ -14,7 +14,7 @@ namespace Warehouse_Complex
         public AboutProgram()
         {
             InitializeComponent();
-            this.Text = String.Format("О программе {0}", AssemblyTitle);
+            this.Text = String.Format("О программе");
             this.labelProductName.Text = AssemblyProduct;
             this.labelVersion.Text = String.Format("Версия {0}", AssemblyVersion);
             this.labelCopyright.Text = AssemblyCopyright;
@@ -45,7 +45,7 @@ namespace Warehouse_Complex
         {
             get
             {
-                return Assembly.GetExecutingAssembly().GetName().Version.ToString();
+                return "1.0"; //Assembly.GetExecutingAssembly().GetName().Version.ToString();
             }
         }
 
@@ -56,9 +56,9 @@ namespace Warehouse_Complex
                 object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyDescriptionAttribute), false);
                 if (attributes.Length == 0)
                 {
-                    return "Складской комплекс был разработан в рамках проекта по предмету МДК 04.01";
+                    return "";
                 }
-                return ((AssemblyDescriptionAttribute)attributes[0]).Description;
+                return "ПО \"Складской комплекс\" была разработана в рамках задания по дисцеплине МДК 04.01 Работу выполнил: студент группы П-31 Михайлов В.В."; //((AssemblyDescriptionAttribute)attributes[0]).Description;
             }
         }
 
@@ -71,7 +71,7 @@ namespace Warehouse_Complex
                 {
                     return "";
                 }
-                return ((AssemblyProductAttribute)attributes[0]).Product;
+                return "Название: Складской комплекс"; //((AssemblyProductAttribute)attributes[0]).Product;
             }
         }
 
@@ -82,7 +82,7 @@ namespace Warehouse_Complex
                 object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false);
                 if (attributes.Length == 0)
                 {
-                    return "Михайлов Вячеслав Владимирович";
+                    return "";
                 }
                 return ((AssemblyCopyrightAttribute)attributes[0]).Copyright;
             }
@@ -95,12 +95,11 @@ namespace Warehouse_Complex
                 object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false);
                 if (attributes.Length == 0)
                 {
-                    return "FlickComp";
+                    return "";
                 }
                 return ((AssemblyCompanyAttribute)attributes[0]).Company;
             }
         }
         #endregion
-
     }
 }

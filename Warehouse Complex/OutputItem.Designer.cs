@@ -80,7 +80,7 @@ namespace Warehouse_Complex
             // Расходы
             // 
             this.Расходы.AutoScroll = true;
-            this.Расходы.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.Расходы.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
             this.Расходы.Controls.Add(this.label6);
             this.Расходы.Controls.Add(this.label5);
             this.Расходы.Controls.Add(this.label4);
@@ -104,6 +104,7 @@ namespace Warehouse_Complex
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(326, 180);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(147, 24);
@@ -116,6 +117,7 @@ namespace Warehouse_Complex
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(315, 121);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(169, 24);
@@ -128,6 +130,7 @@ namespace Warehouse_Complex
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(269, 59);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(251, 24);
@@ -140,6 +143,7 @@ namespace Warehouse_Complex
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(364, 242);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 24);
@@ -149,20 +153,27 @@ namespace Warehouse_Complex
             // b_add
             // 
             this.b_add.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.b_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(55)))), ((int)(((byte)(82)))));
+            this.b_add.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.b_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.b_add.ForeColor = System.Drawing.Color.White;
             this.b_add.Location = new System.Drawing.Point(344, 325);
             this.b_add.Name = "b_add";
             this.b_add.Size = new System.Drawing.Size(111, 48);
             this.b_add.TabIndex = 12;
             this.b_add.Text = "Добавить";
-            this.b_add.UseVisualStyleBackColor = true;
+            this.b_add.UseVisualStyleBackColor = false;
             this.b_add.Click += new System.EventHandler(this.b_add_Click);
             // 
             // tb_fio
             // 
             this.tb_fio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_fio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(84)))));
+            this.tb_fio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tb_fio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tb_fio.ForeColor = System.Drawing.Color.White;
             this.tb_fio.Location = new System.Drawing.Point(266, 148);
             this.tb_fio.Name = "tb_fio";
             this.tb_fio.Size = new System.Drawing.Size(256, 29);
@@ -172,10 +183,13 @@ namespace Warehouse_Complex
             // 
             this.cb_fioGiver.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cb_fioGiver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(84)))));
             this.cb_fioGiver.DataSource = this.работникиСкладаBindingSource;
             this.cb_fioGiver.DisplayMember = "Фамилия";
             this.cb_fioGiver.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_fioGiver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_fioGiver.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cb_fioGiver.ForeColor = System.Drawing.Color.White;
             this.cb_fioGiver.FormattingEnabled = true;
             this.cb_fioGiver.Location = new System.Drawing.Point(266, 207);
             this.cb_fioGiver.Name = "cb_fioGiver";
@@ -197,10 +211,13 @@ namespace Warehouse_Complex
             // 
             this.cb_nameRec.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cb_nameRec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(84)))));
             this.cb_nameRec.DataSource = this.получателиBindingSource;
             this.cb_nameRec.DisplayMember = "Наименование получателя";
             this.cb_nameRec.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_nameRec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_nameRec.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cb_nameRec.ForeColor = System.Drawing.Color.White;
             this.cb_nameRec.FormattingEnabled = true;
             this.cb_nameRec.Location = new System.Drawing.Point(266, 86);
             this.cb_nameRec.Name = "cb_nameRec";
@@ -217,8 +234,11 @@ namespace Warehouse_Complex
             // 
             this.cb_good.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cb_good.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(84)))));
             this.cb_good.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_good.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_good.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cb_good.ForeColor = System.Drawing.Color.White;
             this.cb_good.FormattingEnabled = true;
             this.cb_good.Location = new System.Drawing.Point(266, 269);
             this.cb_good.Name = "cb_good";
@@ -236,7 +256,7 @@ namespace Warehouse_Complex
             // 
             // Получатели
             // 
-            this.Получатели.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.Получатели.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
             this.Получатели.Controls.Add(this.label9);
             this.Получатели.Controls.Add(this.label8);
             this.Получатели.Controls.Add(this.label7);
@@ -257,6 +277,7 @@ namespace Warehouse_Complex
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(347, 227);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(90, 24);
@@ -269,6 +290,7 @@ namespace Warehouse_Complex
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(297, 157);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(193, 24);
@@ -281,6 +303,7 @@ namespace Warehouse_Complex
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(272, 89);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(251, 24);
@@ -291,7 +314,10 @@ namespace Warehouse_Complex
             // 
             this.tb_number.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_number.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(84)))));
+            this.tb_number.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tb_number.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tb_number.ForeColor = System.Drawing.Color.White;
             this.tb_number.Location = new System.Drawing.Point(305, 254);
             this.tb_number.Name = "tb_number";
             this.tb_number.Size = new System.Drawing.Size(178, 29);
@@ -301,7 +327,10 @@ namespace Warehouse_Complex
             // 
             this.tb_nameRec.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_nameRec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(84)))));
+            this.tb_nameRec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tb_nameRec.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tb_nameRec.ForeColor = System.Drawing.Color.White;
             this.tb_nameRec.Location = new System.Drawing.Point(241, 116);
             this.tb_nameRec.Name = "tb_nameRec";
             this.tb_nameRec.Size = new System.Drawing.Size(317, 29);
@@ -311,7 +340,10 @@ namespace Warehouse_Complex
             // 
             this.tb_adress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_adress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(84)))));
+            this.tb_adress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tb_adress.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tb_adress.ForeColor = System.Drawing.Color.White;
             this.tb_adress.Location = new System.Drawing.Point(241, 184);
             this.tb_adress.Name = "tb_adress";
             this.tb_adress.Size = new System.Drawing.Size(317, 29);
@@ -320,13 +352,17 @@ namespace Warehouse_Complex
             // b_addRec
             // 
             this.b_addRec.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.b_addRec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(55)))), ((int)(((byte)(82)))));
+            this.b_addRec.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.b_addRec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_addRec.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.b_addRec.ForeColor = System.Drawing.Color.White;
             this.b_addRec.Location = new System.Drawing.Point(344, 325);
             this.b_addRec.Name = "b_addRec";
             this.b_addRec.Size = new System.Drawing.Size(111, 48);
             this.b_addRec.TabIndex = 0;
             this.b_addRec.Text = "Добавить";
-            this.b_addRec.UseVisualStyleBackColor = true;
+            this.b_addRec.UseVisualStyleBackColor = false;
             this.b_addRec.Click += new System.EventHandler(this.b_addRec_Click);
             // 
             // товарыBindingSource
@@ -350,7 +386,7 @@ namespace Warehouse_Complex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(46)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

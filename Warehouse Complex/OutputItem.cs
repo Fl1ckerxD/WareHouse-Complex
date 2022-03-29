@@ -26,7 +26,7 @@ namespace Warehouse_Complex
             // TODO: данная строка кода позволяет загрузить данные в таблицу "warehouse_ComplexDataSet.Получатели". При необходимости она может быть перемещена или удалена.
             this.получателиTableAdapter.Fill(this.warehouse_ComplexDataSet.Получатели);
 
-            mySqlAplication.Fillcombobox("SELECT Id, Название FROM Товары WHERE Состояние = N'На складе'", "Id", "Название", cb_good);
+            mySqlAplication.Fillcombobox("SELECT Id, Title FROM Good WHERE State = N'На складе'", "Id", "Название", cb_good);
         }
 
         private void b_add_Click(object sender, EventArgs e)
@@ -42,22 +42,22 @@ namespace Warehouse_Complex
                     mySqlAplication.Connect();
 
                     SqlCommand command = new SqlCommand(
-                        "INSERT INTO [Расходы] (Дата, Товар_Id, [Наименование получателя], [ФИО принявшего товар], [ФИО сдавшего товар]) " +
-                        "VALUES (@Дата, @Товар_Id, @Наименование_получателя, @ФИО_принявшего_товар, @ФИО_сдавшего_товар)", mySqlAplication.sqlConnection);
+                        "INSERT INTO Expens (Date, GoodId, RecipientTitle, SuppientName, RecipientName) " +
+                        "VALUES (@Date, @GoodId, @RecipientTitle, @SuppientName, @RecipientName)", mySqlAplication.sqlConnection);
 
-                    command.Parameters.AddWithValue("Дата", dateTimePicker.Value);
-                    command.Parameters.AddWithValue("Товар_Id", cb_good.SelectedValue);
-                    command.Parameters.AddWithValue("Наименование_получателя", cb_nameRec.SelectedValue);
-                    command.Parameters.AddWithValue("ФИО_принявшего_товар", tb_fio.Text);
-                    command.Parameters.AddWithValue("ФИО_сдавшего_товар", cb_fioGiver.SelectedValue);
+                    command.Parameters.AddWithValue("Date", dateTimePicker.Value);
+                    command.Parameters.AddWithValue("GoodId", cb_good.SelectedValue);
+                    command.Parameters.AddWithValue("RecipientTitle", cb_nameRec.SelectedValue);
+                    command.Parameters.AddWithValue("SuppientName", tb_fio.Text);
+                    command.Parameters.AddWithValue("RecipientName", cb_fioGiver.SelectedValue);
                     command.ExecuteNonQuery();
 
                     command = new SqlCommand(
-                        $"UPDATE Товары SET Состояние = N'Ушел' WHERE Id = {cb_good.SelectedValue}", mySqlAplication.sqlConnection);
+                        $"UPDATE Good SET State = N'Ушел' WHERE Id = {cb_good.SelectedValue}", mySqlAplication.sqlConnection);
                     command.ExecuteNonQuery();
 
                     command = new SqlCommand(
-                        $"DELETE FROM [Расположения товаров] WHERE Товар_Id = {cb_good.SelectedValue}", mySqlAplication.sqlConnection);
+                        $"DELETE FROM ProductLocation WHERE GoodId = {cb_good.SelectedValue}", mySqlAplication.sqlConnection);
                     command.ExecuteNonQuery();
 
                     mySqlAplication.sqlConnection.Close();
@@ -83,12 +83,12 @@ namespace Warehouse_Complex
                     mySqlAplication.Connect();
 
                     SqlCommand command = new SqlCommand(
-                        "INSERT INTO [Получатели] ([Наименование получателя], [Юридический адрес], Телефон) " +
-                        "VALUES (@Наименование_получателя, @Юридический_адрес, @Телефон)", mySqlAplication.sqlConnection);
+                        "INSERT INTO Recipient (Name, Steet, Phone) " +
+                        "VALUES (@Recipient, @Steet, @Phone)", mySqlAplication.sqlConnection);
 
-                    command.Parameters.AddWithValue("Наименование_получателя", tb_nameRec.Text);
-                    command.Parameters.AddWithValue("Юридический_адрес", tb_adress.Text);
-                    command.Parameters.AddWithValue("Телефон", tb_number.Text);
+                    command.Parameters.AddWithValue("Recipient", tb_nameRec.Text);
+                    command.Parameters.AddWithValue("Steet", tb_adress.Text);
+                    command.Parameters.AddWithValue("Phone", tb_number.Text);
                     command.ExecuteNonQuery();
 
                     mySqlAplication.sqlConnection.Close();

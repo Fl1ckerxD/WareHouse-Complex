@@ -47,3 +47,9 @@ D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse_Complex.SignIn
 D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse_Complex.Registration.resources
 D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse_Complex.ChangeUser.resources
 D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse_Complex.Addwarehouse.resources
+D:\C#Projects\Git\Warehouse\Warehouse Complex\bin\Debug\EntityFramework.dll
+D:\C#Projects\Git\Warehouse\Warehouse Complex\bin\Debug\EntityFramework.SqlServer.dll
+D:\C#Projects\Git\Warehouse\Warehouse Complex\bin\Debug\EntityFramework.xml
+D:\C#Projects\Git\Warehouse\Warehouse Complex\bin\Debug\EntityFramework.SqlServer.xml
+D:\C#Projects\Git\Warehouse\Warehouse Complex\bin\Debug\ru\EntityFramework.resources.dll
+D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse Complex.csproj.CopyComplete

@@ -16,7 +16,8 @@ namespace Warehouse_Complex
         public static int typeUser = 0;
         public void Connect()
         {
-            sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString);
+            //sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString); Right
+            sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["Warehouse_Complex.Properties.Settings.WareHouseConnectionString"].ConnectionString);
             sqlConnection.Open();
         }
         public void ShowTable(string select,DataGridView dataGridView)

@@ -29,13 +29,13 @@ namespace Warehouse_Complex
             {
                 mySqlAplication.Connect();
 
-                SqlDataAdapter dataAdapter = new SqlDataAdapter($"SELECT * FROM [Логины] WHERE Логин = N'{tb_login.Text}' AND Пароль = N'{tb_password.Text}'", mySqlAplication.sqlConnection);
+                SqlDataAdapter dataAdapter = new SqlDataAdapter($"SELECT * FROM [User] WHERE Login = N'{tb_login.Text}' AND Password = N'{tb_password.Text}'", mySqlAplication.sqlConnection);
                 DataTable dataTable = new DataTable();
                 dataAdapter.Fill(dataTable);
 
                 if (dataTable.Rows.Count > 0)
                 {
-                    switch (dataTable.Rows[0][2])
+                    switch (dataTable.Rows[0][3])
                     {
                         case 1:
                             MySqlAplication.typeUser = 1;

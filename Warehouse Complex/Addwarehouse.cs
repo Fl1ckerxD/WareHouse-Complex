@@ -25,7 +25,7 @@ namespace Warehouse_Complex
 
         private void Addwarehouse_Load(object sender, EventArgs e)
         {
-            mySqlAplication.Fillcombobox("Select id, Фамилия + ' ' + Имя + ' ' + Отчество[ФИО] from [Работники склада]", "id", "ФИО", cb_user);
+            mySqlAplication.Fillcombobox("Select id, Surname + ' ' + Name + ' ' + Patronymic[ФИО] from Worker", "id", "ФИО", cb_user);
 
             UpdateTable();
 
@@ -45,12 +45,12 @@ namespace Warehouse_Complex
                     mySqlAplication.Connect();
 
                     SqlCommand command = new SqlCommand(
-                        "INSERT INTO [Склады] (Название, Тип, Заведующий) " +
-                        "VALUES (@Название, @Тип, @Заведующий)", mySqlAplication.sqlConnection);
+                        "INSERT INTO [Warehouse] (Title, Type, Manager) " +
+                        "VALUES (@Title, @Type, @Manager)", mySqlAplication.sqlConnection);
 
-                    command.Parameters.AddWithValue("Название", tb_name.Text);
-                    command.Parameters.AddWithValue("Тип", cb_type.Text);
-                    command.Parameters.AddWithValue("Заведующий", cb_user.SelectedValue);
+                    command.Parameters.AddWithValue("Title", tb_name.Text);
+                    command.Parameters.AddWithValue("Type", cb_type.Text);
+                    command.Parameters.AddWithValue("Manager", cb_user.SelectedValue);
                     command.ExecuteNonQuery();
 
                     mySqlAplication.sqlConnection.Close();
@@ -89,7 +89,7 @@ namespace Warehouse_Complex
                 {
                     mySqlAplication.Connect();
 
-                    SqlCommand command = new SqlCommand($"UPDATE [Склады] SET Название = N'{tb_nameWarehouse.Text}' , Тип = N'{tb_type.Text}' , Заведующий = N'{tb_user.Text}' WHERE Id = '{tb_id.Text}'", mySqlAplication.sqlConnection);
+                    SqlCommand command = new SqlCommand($"UPDATE Warehouse SET Title = N'{tb_nameWarehouse.Text}' , Type = N'{tb_type.Text}' , Manager = N'{tb_user.Text}' WHERE Id = '{tb_id.Text}'", mySqlAplication.sqlConnection);
                     command.ExecuteNonQuery();
 
                     mySqlAplication.sqlConnection.Close();
@@ -126,7 +126,7 @@ namespace Warehouse_Complex
         }
         private void UpdateTable()
         {
-            dataAdapter = new SqlDataAdapter("SELECT * FROM [Склады]", mySqlAplication.sqlConnection);
+            dataAdapter = new SqlDataAdapter("SELECT * FROM Warehouse", mySqlAplication.sqlConnection);
             dataTable = new DataTable();
             dataAdapter.Fill(dataTable);
         }

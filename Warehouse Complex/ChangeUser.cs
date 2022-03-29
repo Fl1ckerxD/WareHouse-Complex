@@ -27,12 +27,12 @@ namespace Warehouse_Complex
         {
             mySqlAplication.Connect();
 
-            UpdateTable("SELECT * FROM [Работники склада]");
-            UpdateTableUser("SELECT * FROM [Логины]");
+            UpdateTable("SELECT * FROM Worker");
+            UpdateTableUser("SELECT * FROM User");
 
             FillTexbox();          
 
-            mySqlAplication.Fillcombobox("SELECT * FROM [Типы пользователей]", "Id", "Название", cb_typeUser);
+            mySqlAplication.Fillcombobox("SELECT * FROM TypeUser", "Id", "Название", cb_typeUser);
 
             switch (MySqlAplication.typeUser) 
             {
@@ -76,13 +76,13 @@ namespace Warehouse_Complex
                 {
                     mySqlAplication.Connect();
 
-                    SqlCommand command = new SqlCommand($"UPDATE [Работники склада] SET Фамилия = N'{tb_surname.Text}' , Имя = N'{tb_name.Text}' , Отчество = N'{tb_patronic.Text}' , Должность = N'{tb_dol.Text}' WHERE Id = '{tb_id.Text}'", mySqlAplication.sqlConnection);
+                    SqlCommand command = new SqlCommand($"UPDATE Worker SET Surname = N'{tb_surname.Text}' , Name = N'{tb_name.Text}' , Patronymic = N'{tb_patronic.Text}' , Position = N'{tb_dol.Text}' WHERE Id = '{tb_id.Text}'", mySqlAplication.sqlConnection);
                     command.ExecuteNonQuery();
 
                     mySqlAplication.sqlConnection.Close();
                     MessageBox.Show("Данные успешно были изменены", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    UpdateTable("SELECT * FROM [Работники склада]");
+                    UpdateTable("SELECT * FROM Worker");
                 }
                 catch
                 {
@@ -142,7 +142,7 @@ namespace Warehouse_Complex
         {
             dataAdapter = new SqlDataAdapter(select, mySqlAplication.sqlConnection);
             dataTableUsers = new DataTable();
-            dataAdapter.Fill(dataTableUsers);
+            //dataAdapter.Fill(dataTableUsers);
         }
 
         private void b_back1_Click(object sender, EventArgs e)
@@ -169,13 +169,13 @@ namespace Warehouse_Complex
                 {
                     mySqlAplication.Connect();
 
-                    SqlCommand command = new SqlCommand($"UPDATE [Логины] SET Пароль = N'{tb_password.Text}' , [Тип пользователя] = N'{cb_typeUser.SelectedValue}' WHERE Логин = N'{tb_login.Text}'", mySqlAplication.sqlConnection);
+                    SqlCommand command = new SqlCommand($"UPDATE User SET Password = N'{tb_password.Text}' , Type = N'{cb_typeUser.SelectedValue}' WHERE Login = N'{tb_login.Text}'", mySqlAplication.sqlConnection);
                     command.ExecuteNonQuery();
 
                     mySqlAplication.sqlConnection.Close();
                     MessageBox.Show("Данные успешно были изменены", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    UpdateTableUser("SELECT * FROM [Логины]");
+                    UpdateTableUser("SELECT * FROM User");
                 }
                 catch
                 {

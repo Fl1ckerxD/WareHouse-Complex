@@ -31,20 +31,20 @@ namespace Warehouse_Complex
                 {
                     mySqlAplication.Connect();
 
-                    SqlCommand command = new SqlCommand("INSERT INTO [Работники склада] (Фамилия, Имя, Отчество) " +
-                       "VALUES (@Фамилия, @Имя, @Отчество)", mySqlAplication.sqlConnection);
+                    SqlCommand command = new SqlCommand("INSERT INTO Worker (Surname, Name, Patronymic) " +
+                       "VALUES (@Surname, @Name, @Patronymic)", mySqlAplication.sqlConnection);
 
-                    command.Parameters.AddWithValue("Фамилия", tb_surname.Text);
-                    command.Parameters.AddWithValue("Имя", tb_name.Text);
-                    command.Parameters.AddWithValue("Отчество", tb_patronic.Text);
+                    command.Parameters.AddWithValue("Surname", tb_surname.Text);
+                    command.Parameters.AddWithValue("Name", tb_name.Text);
+                    command.Parameters.AddWithValue("Patronymic", tb_patronic.Text);
                     command.ExecuteNonQuery();
 
-                    command = new SqlCommand("INSERT INTO Логины (Логин, Пароль, Пользователь_id) " +
-                        "VALUES (@Логин, @Пароль, @Пользователь_id)", mySqlAplication.sqlConnection);
+                    command = new SqlCommand("INSERT INTO User (Login, Password, WorkerId) " +
+                        "VALUES (@Login, @Password, @WorkerId)", mySqlAplication.sqlConnection);
 
-                    command.Parameters.AddWithValue("Логин", tb_login.Text);
-                    command.Parameters.AddWithValue("Пароль", tb_password.Text);
-                    command.Parameters.AddWithValue("Пользователь_id", idUser());
+                    command.Parameters.AddWithValue("Login", tb_login.Text);
+                    command.Parameters.AddWithValue("Password", tb_password.Text);
+                    command.Parameters.AddWithValue("WorkerId", idUser());
                     command.ExecuteNonQuery();
 
                     mySqlAplication.sqlConnection.Close();
@@ -58,7 +58,7 @@ namespace Warehouse_Complex
         }
         private string idUser()
         {
-            SqlDataAdapter dataAdapter = new SqlDataAdapter("Select id from [Работники склада]", mySqlAplication.sqlConnection);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter("Select id from Worker", mySqlAplication.sqlConnection);
             DataTable dataTable = new DataTable();
 
             dataAdapter.Fill(dataTable);

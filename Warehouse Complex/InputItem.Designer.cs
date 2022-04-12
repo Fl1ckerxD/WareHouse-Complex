@@ -69,6 +69,9 @@ namespace Warehouse_Complex
             this.поставщикиTableAdapter = new Warehouse_Complex.Warehouse_ComplexDataSetTableAdapters.ПоставщикиTableAdapter();
             this.работники_складаTableAdapter = new Warehouse_Complex.Warehouse_ComplexDataSetTableAdapters.Работники_складаTableAdapter();
             this.складыTableAdapter = new Warehouse_Complex.Warehouse_ComplexDataSetTableAdapters.СкладыTableAdapter();
+            this.wareHouseDataSet = new Warehouse_Complex.WareHouseDataSet();
+            this.goodBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.goodTableAdapter = new Warehouse_Complex.WareHouseDataSetTableAdapters.GoodTableAdapter();
             this.tabControl1.SuspendLayout();
             this.Поставки.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.работникиСкладаBindingSource)).BeginInit();
@@ -77,6 +80,8 @@ namespace Warehouse_Complex
             this.Расположение_товара.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.складыBindingSource)).BeginInit();
             this.Поставщики.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.wareHouseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -415,8 +420,6 @@ namespace Warehouse_Complex
             this.cb_goodsLoc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cb_goodsLoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(84)))));
-            this.cb_goodsLoc.DataSource = this.поставщикиBindingSource;
-            this.cb_goodsLoc.DisplayMember = "Наименование  поставщика";
             this.cb_goodsLoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_goodsLoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_goodsLoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -426,7 +429,6 @@ namespace Warehouse_Complex
             this.cb_goodsLoc.Name = "cb_goodsLoc";
             this.cb_goodsLoc.Size = new System.Drawing.Size(317, 32);
             this.cb_goodsLoc.TabIndex = 21;
-            this.cb_goodsLoc.ValueMember = "Id";
             // 
             // Поставщики
             // 
@@ -551,6 +553,20 @@ namespace Warehouse_Complex
             // 
             this.складыTableAdapter.ClearBeforeFill = true;
             // 
+            // wareHouseDataSet
+            // 
+            this.wareHouseDataSet.DataSetName = "WareHouseDataSet";
+            this.wareHouseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // goodBindingSource
+            // 
+            this.goodBindingSource.DataMember = "Good";
+            this.goodBindingSource.DataSource = this.wareHouseDataSet;
+            // 
+            // goodTableAdapter
+            // 
+            this.goodTableAdapter.ClearBeforeFill = true;
+            // 
             // InputItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -573,6 +589,8 @@ namespace Warehouse_Complex
             ((System.ComponentModel.ISupportInitialize)(this.складыBindingSource)).EndInit();
             this.Поставщики.ResumeLayout(false);
             this.Поставщики.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.wareHouseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.goodBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -618,5 +636,8 @@ namespace Warehouse_Complex
         private System.Windows.Forms.ComboBox cb_goodsLoc;
         private System.Windows.Forms.BindingSource складыBindingSource;
         private Warehouse_ComplexDataSetTableAdapters.СкладыTableAdapter складыTableAdapter;
+        private WareHouseDataSet wareHouseDataSet;
+        private System.Windows.Forms.BindingSource goodBindingSource;
+        private WareHouseDataSetTableAdapters.GoodTableAdapter goodTableAdapter;
     }
 }

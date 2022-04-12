@@ -21,6 +21,8 @@ namespace Warehouse_Complex
 
         private void InputItem_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "wareHouseDataSet.Good". При необходимости она может быть перемещена или удалена.
+            this.goodTableAdapter.Fill(this.wareHouseDataSet.Good);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "warehouse_ComplexDataSet.Склады". При необходимости она может быть перемещена или удалена.
             this.складыTableAdapter.Fill(this.warehouse_ComplexDataSet.Склады);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "warehouse_ComplexDataSet.Работники_склада". При необходимости она может быть перемещена или удалена.
@@ -28,7 +30,7 @@ namespace Warehouse_Complex
             // TODO: данная строка кода позволяет загрузить данные в таблицу "warehouse_ComplexDataSet.Поставщики". При необходимости она может быть перемещена или удалена.
             this.поставщикиTableAdapter.Fill(this.warehouse_ComplexDataSet.Поставщики);
 
-            mySqlAplication.Fillcombobox("SELECT Id, Title FROM Good WHERE State = N'На складе'", "Id", "Название", cb_goodsLoc);
+            mySqlAplication.Fillcombobox("SELECT Id, Title FROM Good WHERE State = N'На складе'", "Title", "Название", cb_goodsLoc);
         }
 
         private void b_add_Click(object sender, EventArgs e)
@@ -76,7 +78,7 @@ namespace Warehouse_Complex
         }
         private string idGood()
         {          
-            SqlDataAdapter dataAdapter = new SqlDataAdapter("Select id from Good", mySqlAplication.sqlConnection);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter("Select Id from Good", mySqlAplication.sqlConnection);
             DataTable dataTable = new DataTable();
 
             dataAdapter.Fill(dataTable);

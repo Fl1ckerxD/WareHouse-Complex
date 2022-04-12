@@ -32,7 +32,6 @@ D:\C#Projects\Git\Warehouse\Warehouse Complex\bin\Debug\Warehouse Complex_log.ld
 D:\C#Projects\Git\Warehouse\Warehouse Complex\bin\Debug\Warehouse Complex.exe.config
 D:\C#Projects\Git\Warehouse\Warehouse Complex\bin\Debug\Warehouse Complex.exe
 D:\C#Projects\Git\Warehouse\Warehouse Complex\bin\Debug\Warehouse Complex.pdb
-D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse Complex.csproj.AssemblyReference.cache
 D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse_Complex.AboutProgram.resources
 D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse_Complex.Directory.resources
 D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse_Complex.Form1.resources
@@ -53,3 +52,4 @@ D:\C#Projects\Git\Warehouse\Warehouse Complex\bin\Debug\EntityFramework.xml
 D:\C#Projects\Git\Warehouse\Warehouse Complex\bin\Debug\EntityFramework.SqlServer.xml
 D:\C#Projects\Git\Warehouse\Warehouse Complex\bin\Debug\ru\EntityFramework.resources.dll
 D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse Complex.csproj.CopyComplete
+D:\C#Projects\Git\Warehouse\Warehouse Complex\obj\Debug\Warehouse Complex.csproj.AssemblyReference.cache

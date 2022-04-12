@@ -26,7 +26,7 @@ namespace Warehouse_Complex
             // TODO: данная строка кода позволяет загрузить данные в таблицу "warehouse_ComplexDataSet.Получатели". При необходимости она может быть перемещена или удалена.
             this.получателиTableAdapter.Fill(this.warehouse_ComplexDataSet.Получатели);
 
-            mySqlAplication.Fillcombobox("SELECT Id, Title FROM Good WHERE State = N'На складе'", "Id", "Название", cb_good);
+            mySqlAplication.Fillcombobox("SELECT Id, Title FROM Good WHERE State = N'На складе'", "Title", "Название", cb_good);
         }
 
         private void b_add_Click(object sender, EventArgs e)

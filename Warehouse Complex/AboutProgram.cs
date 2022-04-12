@@ -6,6 +6,8 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Diagnostics;
 
 namespace Warehouse_Complex
 {
@@ -101,5 +103,17 @@ namespace Warehouse_Complex
             }
         }
         #endregion
+
+        private void b_spravka_Click(object sender, EventArgs e)
+        {
+            string path = @"D:\C#Projects\Git\Warehouse\Warehouse Complex\Resources\Справка.chm";
+            if (File.Exists(path))
+            {
+                Process proc = new Process();
+                proc.StartInfo.FileName = path;
+                proc.StartInfo.UseShellExecute = true;
+                proc.Start();
+            }
+        }
     }
 }

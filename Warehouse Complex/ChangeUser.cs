@@ -28,7 +28,7 @@ namespace Warehouse_Complex
             mySqlAplication.Connect();
 
             UpdateTable("SELECT * FROM Worker");
-            UpdateTableUser("SELECT * FROM User");
+            //UpdateTableUser("SELECT Login, Password, Type, WorkerId FROM dbo.User");
 
             FillTexbox();          
 
@@ -142,7 +142,7 @@ namespace Warehouse_Complex
         {
             dataAdapter = new SqlDataAdapter(select, mySqlAplication.sqlConnection);
             dataTableUsers = new DataTable();
-            //dataAdapter.Fill(dataTableUsers);
+            dataAdapter.Fill(dataTableUsers);
         }
 
         private void b_back1_Click(object sender, EventArgs e)
@@ -175,7 +175,7 @@ namespace Warehouse_Complex
                     mySqlAplication.sqlConnection.Close();
                     MessageBox.Show("Данные успешно были изменены", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    UpdateTableUser("SELECT * FROM User");
+                    UpdateTableUser("SELECT Login, Password, Type, WorkerId FROM User");
                 }
                 catch
                 {

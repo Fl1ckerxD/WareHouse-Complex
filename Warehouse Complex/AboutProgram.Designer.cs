@@ -36,6 +36,7 @@ namespace Warehouse_Complex
             this.labelCopyright = new System.Windows.Forms.Label();
             this.labelCompanyName = new System.Windows.Forms.Label();
             this.textBoxDescription = new System.Windows.Forms.TextBox();
+            this.b_spravka = new System.Windows.Forms.Button();
             this.tableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +52,7 @@ namespace Warehouse_Complex
             this.tableLayoutPanel.Controls.Add(this.labelCopyright, 1, 2);
             this.tableLayoutPanel.Controls.Add(this.labelCompanyName, 1, 3);
             this.tableLayoutPanel.Controls.Add(this.textBoxDescription, 1, 4);
+            this.tableLayoutPanel.Controls.Add(this.b_spravka, 1, 5);
             this.tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel.Location = new System.Drawing.Point(9, 9);
             this.tableLayoutPanel.Name = "tableLayoutPanel";
@@ -138,6 +140,16 @@ namespace Warehouse_Complex
             this.textBoxDescription.TabStop = false;
             this.textBoxDescription.Text = "Описание";
             // 
+            // b_spravka
+            // 
+            this.b_spravka.Location = new System.Drawing.Point(140, 239);
+            this.b_spravka.Name = "b_spravka";
+            this.b_spravka.Size = new System.Drawing.Size(75, 23);
+            this.b_spravka.TabIndex = 24;
+            this.b_spravka.Text = "Справка";
+            this.b_spravka.UseVisualStyleBackColor = true;
+            this.b_spravka.Click += new System.EventHandler(this.b_spravka_Click);
+            // 
             // AboutProgram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,5 +181,6 @@ namespace Warehouse_Complex
         private System.Windows.Forms.Label labelCopyright;
         private System.Windows.Forms.Label labelCompanyName;
         private System.Windows.Forms.TextBox textBoxDescription;
+        private System.Windows.Forms.Button b_spravka;
     }
 }

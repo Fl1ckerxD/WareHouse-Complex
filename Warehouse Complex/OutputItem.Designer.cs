@@ -57,6 +57,9 @@ namespace Warehouse_Complex
             this.товарыTableAdapter = new Warehouse_Complex.Warehouse_ComplexDataSetTableAdapters.ТоварыTableAdapter();
             this.получателиTableAdapter = new Warehouse_Complex.Warehouse_ComplexDataSetTableAdapters.ПолучателиTableAdapter();
             this.работники_складаTableAdapter = new Warehouse_Complex.Warehouse_ComplexDataSetTableAdapters.Работники_складаTableAdapter();
+            this.wareHouseDataSet = new Warehouse_Complex.WareHouseDataSet();
+            this.recipientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.recipientTableAdapter = new Warehouse_Complex.WareHouseDataSetTableAdapters.RecipientTableAdapter();
             this.tabControl1.SuspendLayout();
             this.Расходы.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.работникиСкладаBindingSource)).BeginInit();
@@ -64,6 +67,8 @@ namespace Warehouse_Complex
             ((System.ComponentModel.ISupportInitialize)(this.получателиBindingSource)).BeginInit();
             this.Получатели.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.товарыBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wareHouseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.recipientBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -184,8 +189,6 @@ namespace Warehouse_Complex
             this.cb_fioGiver.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cb_fioGiver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(84)))));
-            this.cb_fioGiver.DataSource = this.работникиСкладаBindingSource;
-            this.cb_fioGiver.DisplayMember = "Фамилия";
             this.cb_fioGiver.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_fioGiver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_fioGiver.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -195,7 +198,6 @@ namespace Warehouse_Complex
             this.cb_fioGiver.Name = "cb_fioGiver";
             this.cb_fioGiver.Size = new System.Drawing.Size(256, 32);
             this.cb_fioGiver.TabIndex = 10;
-            this.cb_fioGiver.ValueMember = "Id";
             // 
             // работникиСкладаBindingSource
             // 
@@ -212,8 +214,8 @@ namespace Warehouse_Complex
             this.cb_nameRec.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cb_nameRec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(62)))), ((int)(((byte)(84)))));
-            this.cb_nameRec.DataSource = this.получателиBindingSource;
-            this.cb_nameRec.DisplayMember = "Наименование получателя";
+            this.cb_nameRec.DataSource = this.recipientBindingSource;
+            this.cb_nameRec.DisplayMember = "Name";
             this.cb_nameRec.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_nameRec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_nameRec.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -382,6 +384,20 @@ namespace Warehouse_Complex
             // 
             this.работники_складаTableAdapter.ClearBeforeFill = true;
             // 
+            // wareHouseDataSet
+            // 
+            this.wareHouseDataSet.DataSetName = "WareHouseDataSet";
+            this.wareHouseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // recipientBindingSource
+            // 
+            this.recipientBindingSource.DataMember = "Recipient";
+            this.recipientBindingSource.DataSource = this.wareHouseDataSet;
+            // 
+            // recipientTableAdapter
+            // 
+            this.recipientTableAdapter.ClearBeforeFill = true;
+            // 
             // OutputItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -402,6 +418,8 @@ namespace Warehouse_Complex
             this.Получатели.ResumeLayout(false);
             this.Получатели.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.товарыBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wareHouseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.recipientBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -435,5 +453,8 @@ namespace Warehouse_Complex
         private Warehouse_ComplexDataSetTableAdapters.ПолучателиTableAdapter получателиTableAdapter;
         private System.Windows.Forms.BindingSource работникиСкладаBindingSource;
         private Warehouse_ComplexDataSetTableAdapters.Работники_складаTableAdapter работники_складаTableAdapter;
+        private WareHouseDataSet wareHouseDataSet;
+        private System.Windows.Forms.BindingSource recipientBindingSource;
+        private WareHouseDataSetTableAdapters.RecipientTableAdapter recipientTableAdapter;
     }
 }

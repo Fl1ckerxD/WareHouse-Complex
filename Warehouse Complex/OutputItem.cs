@@ -21,11 +21,11 @@ namespace Warehouse_Complex
 
         private void OutputItem_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "warehouse_ComplexDataSet.Работники_склада". При необходимости она может быть перемещена или удалена.
-            this.работники_складаTableAdapter.Fill(this.warehouse_ComplexDataSet.Работники_склада);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "warehouse_ComplexDataSet.Получатели". При необходимости она может быть перемещена или удалена.
-            this.получателиTableAdapter.Fill(this.warehouse_ComplexDataSet.Получатели);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "wareHouseDataSet.Recipient". При необходимости она может быть перемещена или удалена.
+            this.recipientTableAdapter.Fill(this.wareHouseDataSet.Recipient);
 
+            mySqlAplication.Fillcombobox("Select id, Surname + ' ' + Name + ' ' + Patronymic[ФИО] from Worker", "id", "ФИО", cb_fioGiver);
+            cb_fioGiver.SelectedValue = MySqlAplication.idUser;
             mySqlAplication.Fillcombobox("SELECT Id, Title FROM Good WHERE State = N'На складе'", "Title", "Название", cb_good);
         }
 

@@ -14,6 +14,7 @@ namespace Warehouse_Complex
     {
         public SqlConnection sqlConnection = null;
         public static int typeUser = 0;
+        public static int idUser = 0;
         public void Connect()
         {
             //sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString); Right

@@ -21,14 +21,13 @@ namespace Warehouse_Complex
 
         private void InputItem_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "wareHouseDataSet.Good". При необходимости она может быть перемещена или удалена.
-            this.goodTableAdapter.Fill(this.wareHouseDataSet.Good);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "warehouse_ComplexDataSet.Склады". При необходимости она может быть перемещена или удалена.
-            this.складыTableAdapter.Fill(this.warehouse_ComplexDataSet.Склады);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "warehouse_ComplexDataSet.Работники_склада". При необходимости она может быть перемещена или удалена.
-            this.работники_складаTableAdapter.Fill(this.warehouse_ComplexDataSet.Работники_склада);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "warehouse_ComplexDataSet.Поставщики". При необходимости она может быть перемещена или удалена.
-            this.поставщикиTableAdapter.Fill(this.warehouse_ComplexDataSet.Поставщики);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "wareHouseDataSet.Warehouse". При необходимости она может быть перемещена или удалена.
+            this.warehouseTableAdapter.Fill(this.wareHouseDataSet.Warehouse);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "wareHouseDataSet.Supplier". При необходимости она может быть перемещена или удалена.
+            this.supplierTableAdapter.Fill(this.wareHouseDataSet.Supplier);
+
+            mySqlAplication.Fillcombobox("Select id, Surname + ' ' + Name + ' ' + Patronymic[ФИО] from Worker", "id", "ФИО", cb_fio);
+            cb_fio.SelectedValue = MySqlAplication.idUser;
 
             mySqlAplication.Fillcombobox("SELECT Id, Title FROM Good WHERE State = N'На складе'", "Title", "Название", cb_goodsLoc);
         }

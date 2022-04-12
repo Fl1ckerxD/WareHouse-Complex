@@ -35,6 +35,7 @@ namespace Warehouse_Complex
 
                 if (dataTable.Rows.Count > 0)
                 {
+                    MySqlAplication.idUser = Convert.ToInt32(dataTable.Rows[0][0].ToString());
                     switch (dataTable.Rows[0][3])
                     {
                         case 1:
